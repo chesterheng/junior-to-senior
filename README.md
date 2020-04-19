@@ -166,5 +166,11 @@
   - Combine all CSS files into one
   - Combine all JS files into one
 - Exercise: #2 - Network Optimizations
+  - Minimize all text: e.g. [CSS and JS Minifier](https://www.minifier.org/)
+  - Minimize images
+  - Media Queries
+  - Minimize # of files
+![Before](network-optimizations-before.jpg)
+![After](network-optimizations-after.jpg)
 
 **[⬆ back to top](#table-of-contents)**
