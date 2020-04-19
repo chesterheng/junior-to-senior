@@ -2,7 +2,10 @@
 
 ## Table of Contents
 
-- [Section 2: SSH](#section-2-ssh)
+- [The Complete Junior to Senior Web Developer Roadmap (2020)](#the-complete-junior-to-senior-web-developer-roadmap-2020)
+  - [Table of Contents](#table-of-contents)
+  - [**Section 2: SSH**](#section-2-ssh)
+  - [**Section 3: Performance Part 1**](#section-3-performance-part-1)
 
 ## **Section 2: SSH**
 
@@ -83,5 +86,85 @@
     - Test SSH connection: `ssh -T git@github.com`
     - Clone repo with ssh keys: `git clone git@github.com:chesterheng/learn-formik.git`
   - Github: Check SSH key display Last used within the last week — Read/write
+
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 3: Performance Part 1**
+
+- Introduction to Performance Part 1
+  - Client make a request to Server
+  - Server return HTML
+  - Client render HTML and need CSS
+  - Client request CSS from Server
+  - Client request Assets from Server
+  - Client request JS from Server
+- Visitor expect site to load within 2 sec
+- In order to display website,
+  - Frontend: Send GET request to Backend
+  - Backend: Receive the request
+  - Backend: Retrieve data from database
+  - Backend: Process data and return data to Frontend
+  - Frontend: Render HTML and data from Backend
+- 3 Keys To Performance
+  - Improve the Frontend render
+  - Transfer of file, network latency
+  - Improve the Backend processing
+- How to improve?
+  - Frontend
+    - Critical Render path (Part 1)
+    - Optimized Code (Part 2)
+    - Progressive Web App (Part 2)
+  - Transfer
+    - Minimize Files (Part 1)
+    - Minimize Delivery (Part 1)
+  - Backend
+    - CDNs (Part 3)
+    - Caching (Part 3)
+    - Load Balancing (Part 3)
+    - DB Scaling (Part 3)
+    - GZIP (Part 3)
+- Network Performance
+  1. Honey I shrunk the files
+  2. The traveling deliveryman
+- Honey I shrunk the files
+- Minimize Text: HTML, CSS, JS (Revisit in Webpack)
+  - [UglifyJS](https://skalman.github.io/UglifyJS-online/)
+- Minimize Images
+  - JPG: e.g. photograph
+    - lot of colors required
+    - no transparent background
+  - GIF: use for small animation
+  - PNG: e.g. logo
+    - less colors required
+    - transparent background
+  - SVG: vector graphic, expand without distortion
+- Resources: Image File Formats
+  - [Image file formats: when to use each file type](https://99designs.com/blog/tips/image-file-types)
+  - [Page Weight Tool](https://pageweight.imgix.com)
+  - [GIF, PNG, JPG or SVG. Which One To Use?](https://www.sitepoint.com/gif-png-jpg-which-one-to-use)
+- Image Optimizations
+  - If you want transparency: use a PNG
+  - If you want animations: use a GIF
+  - If you want colourful images: use a JPG
+  - If you want simple icons, logos, and illustions: use SVGs
+  - Reduce PNG with [TinyPNG](https://tinypng.com)
+  - Reduce JPG with [JPEG-optimizer](http://jpeg-optimizer.com)
+  - Reduce SVG with [Nano](https://vecta.io/nano)
+  - Try to choose simple illustrations over highly detailed photographs
+  - Always lower JPEG image quality (30 - 60%)
+  - Resize image based on size it will be displayed
+  - Display different sized images for different backgrounds
+    - [Media Queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
+    - [Media Queries Cheat Sheet](https://gist.github.com/bartholomej/8415655)
+  - Use CDNs like imigx
+  - [Remove image metadata](https://www.verexif.com/en/)
+- Exercise: #1 - Media Queries
+- The traveling deliveryman
+  - Less trips: is CSS framework necessary?
+  - Less trips: is JS library necessary?
+  - Browser: 2-6 [max currently request](https://stackoverflow.com/questions/985431/max-parallel-http-connections-in-a-browser)
+  - Combine all CSS files into one
+  - Combine all JS files into one
+- Exercise: #2 - Network Optimizations
 
 **[⬆ back to top](#table-of-contents)**
