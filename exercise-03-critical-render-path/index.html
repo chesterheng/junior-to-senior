@@ -1,0 +1,47 @@
+
+<!--
+HTML
+  #1 Load <style> in <head>
+  #2 Load <script> right before /body
+CSS
+  #3 Load only what is needed
+  #4 Above the fold loading
+  #5 Media attributes
+  #6 Less specificity
+JS
+  #7 Load scripts asynchronously
+  #8 Defer loading of scripts
+  #9 Minimize DOM manipulation
+  #10 Avoid long running Javascript
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Critical Render Path</title>
+
+  <!-- External CSS-->
+  <link rel="stylesheet" href="./style.css" media="all">
+
+</head>
+<body>
+  <h1>How Fast?</h1>
+  <button>Click Me</button>
+  <img src="https://5.imimg.com/data5/GR/PD/MY-4659120/img-20161230-wa0170-500x500.jpg">
+
+  <!-- Render blocking and Parser blocking JS -->
+  <script>
+    var button = document.querySelector("button");
+    button.style.color = "red";
+  </script>
+  <script src="./script.js"></script>
+  <script src="./script2.js"></script>
+  <script src="./script3.js"></script>
+  <!-- <script>
+    const button = document.querySelector("button");
+    button.addEventListener("click", function () {
+      alert("Stop Clicking Me!");
+    });
+  </script> -->
+</body>
+</html>

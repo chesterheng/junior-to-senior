@@ -1,0 +1,14 @@
+h1 {
+  color: red;
+}
+
+
+/* bad */
+.header .nav .item .link a.important {
+  color: pink;
+}
+
+/* good */
+a.important {
+  color: pink;
+}

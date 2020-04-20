@@ -172,5 +172,50 @@
   - Minimize # of files
 ![Before](network-optimizations-before.jpg)
 ![After](network-optimizations-after.jpg)
+- Critical Render Path Introduction
+  - DOM -> CSSOM -> Render Tree -> Layout -> Paint
+  - Client: 1. Request HTML file from server
+  - Server: Return HTML file
+  - Client: Parse HTML and start to build the DOM
+  - Client: Request external resources from server
+  - Client: 2. Request CSS file from server
+  - Server: Return CSS file
+  - Client: Parse CSS and start to build the CSSOM
+  - Client: 3 .Request JS file from server
+  - Server: Return JS file
+  - Client: 4. DOMCOntentLoaded state
+  - Client: Read JS file and make changes to the DOM or CSSOM
+  - Client: Combine DOM and CSSOM into a render tree
+  - Client: Figure out the layout and positioning with the render tree
+  - Client: Paint all the pixels on the browser
+  - CLient: Request photo when encounter image tag from server
+  - Client: Start to download photo in the background 
+  - Client: Show when downloaded
+  - Client: JS modified Render tree due to user trigger events
+- Critical Render Path 1
+  - HTML: Load style tag in the `<head>`
+  - HTML: Load script right before `</body>`
+- Critical Render Path 2
+  - CSS: Only load whatever is needed
+  - CSS: Above the fold loading: load necessary style first
+  - CSS: Media Attributes
+  - CSS: Less Specificity
+- Critical Render Path 3
+  - JS: Load Scripts asynchronously
+  - JS: Defer Loading of scripts
+  - JS: Minimize DOM manipulation
+  - JS: Avoid long running JavaScript
+  - Resource: [Loading Third-Party JavaScript](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript)
+  - Resource: [Async + Defer](https://stackoverflow.com/questions/10808109/script-tag-async-defer)
+- Critical Render Path 4
+  - Download HTML -> Construct DOM
+  - Download CSS -> Construct CSSOM
+  - Download JS -> Modify DOM and CSSOM
+  - Construct render tree with DOM and CSSOM
+  - Figure layout and positioning from the render tree
+  - Paint pixels on the screen
+  - Load image in the background and display web page
+- Exercise: #3 - Critical Render Path
+- Free course: [The Critical Rendering Path](https://www.udacity.com/course/website-performance-optimization--ud884)
 
 **[⬆ back to top](#table-of-contents)**
