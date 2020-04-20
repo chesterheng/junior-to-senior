@@ -217,5 +217,8 @@
   - Load image in the background and display web page
 - Exercise: #3 - Critical Render Path
 - Free course: [The Critical Rendering Path](https://www.udacity.com/course/website-performance-optimization--ud884)
+- Exercise: #4 - Keiko Corp Website
+  - [PageSpeed Insights]()
+  - [WebPageTest]()
 
 **[⬆ back to top](#table-of-contents)**
