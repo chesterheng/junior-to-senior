@@ -218,7 +218,11 @@
 - Exercise: #3 - Critical Render Path
 - Free course: [The Critical Rendering Path](https://www.udacity.com/course/website-performance-optimization--ud884)
 - Exercise: #4 - Keiko Corp Website
-  - [PageSpeed Insights]()
-  - [WebPageTest]()
+  - [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+  - [WebPageTest](https://www.webpagetest.org/)
+- Resource Prefetching: [Prefetching, preloading, prebrowsing](https://css-tricks.com/prefetching-preloading-prebrowsing/)
+- [Performance Tools](https://www.udemy.com/course/the-complete-junior-to-senior-web-developer-roadmap/learn/lecture/10210456#content)
+- [HTTP/2](https://developers.google.com/web/fundamentals/performance/http2/)
+- [HTTP/3](https://blog.cloudflare.com/http3-the-past-present-and-future/)
 
 **[⬆ back to top](#table-of-contents)**
