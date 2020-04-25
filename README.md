@@ -273,5 +273,8 @@
 - Code Splitting / Progressive Bootstrapping
   - Min JS required for current page
   - Lazy load for another page when current page is interactive
-  - 
+- Code Splitting Technique
+  - [Route-based code splitting](https://reactjs.org/docs/code-splitting.html#route-based-code-splitting)
+  - Component based Code Splitting
+    - Example: [react-loadable](https://github.com/jamiebuilds/react-loadable)
 **[⬆ back to top](#table-of-contents)**
