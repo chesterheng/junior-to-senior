@@ -7,6 +7,7 @@
   - [**Section 2: SSH**](#section-2-ssh)
   - [**Section 3: Performance Part 1**](#section-3-performance-part-1)
   - [**Section 4: React + Redux + Module Bundling**](#section-4-react--redux--module-bundling)
+  - [**Section 5: Performance Part 2**](#section-5-performance-part-2)
 
 ## **Section 2: SSH**
 
@@ -171,8 +172,8 @@
   - Minimize images
   - Media Queries
   - Minimize # of files
-![Before](network-optimizations-before.jpg)
-![After](network-optimizations-after.jpg)
+    ![Before](network-optimizations-before.jpg)
+    ![After](network-optimizations-after.jpg)
 - Critical Render Path Introduction
   - DOM -> CSSOM -> Render Tree -> Layout -> Paint
   - Client: 1. Request HTML file from server
@@ -190,7 +191,7 @@
   - Client: Figure out the layout and positioning with the render tree
   - Client: Paint all the pixels on the browser
   - CLient: Request photo when encounter image tag from server
-  - Client: Start to download photo in the background 
+  - Client: Start to download photo in the background
   - Client: Show when downloaded
   - Client: JS modified Render tree due to user trigger events
 - Critical Render Path 1
@@ -229,6 +230,7 @@
 **[⬆ back to top](#table-of-contents)**
 
 ## **Section 4: React + Redux + Module Bundling**
+
 - Angular vs React vs Vue (think of Pros and Cons)
 - Angular: for large bank with massive codebase
 - Angular: a full framework, everyone sticks to the rules
@@ -250,4 +252,26 @@
   - Action -> Reducer -> Redux Store -> Make changes in Components
   - Resources: [Webpack 4 Configurator](http://web.jakoblind.no/webpack-config)
 
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 5: Performance Part 2**
+
+- Code optimization
+  - Request JS
+  - JS Arrives
+  - Compile / Parse / Execute
+  - fetch()
+  - Content Arrives
+  - Compile / Parse / Execute
+  - Page Interactive
+- Solutions
+  - [Ahead-of-time (AOT) compilation](https://angular.io/guide/aot-compiler)
+  - Limit animation
+- Measurements
+  - Time to first meaningful paint
+  - Time to interactive
+- Code Splitting / Progressive Bootstrapping
+  - Min JS required for current page
+  - Lazy load for another page when current page is interactive
+  - 
 **[⬆ back to top](#table-of-contents)**
