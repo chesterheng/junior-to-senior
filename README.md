@@ -6,6 +6,7 @@
   - [Table of Contents](#table-of-contents)
   - [**Section 2: SSH**](#section-2-ssh)
   - [**Section 3: Performance Part 1**](#section-3-performance-part-1)
+  - [**Section 4: React + Redux + Module Bundling**](#section-4-react--redux--module-bundling)
 
 ## **Section 2: SSH**
 
@@ -224,5 +225,29 @@
 - [Performance Tools](https://www.udemy.com/course/the-complete-junior-to-senior-web-developer-roadmap/learn/lecture/10210456#content)
 - [HTTP/2](https://developers.google.com/web/fundamentals/performance/http2/)
 - [HTTP/3](https://blog.cloudflare.com/http3-the-past-present-and-future/)
+
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 4: React + Redux + Module Bundling**
+- Angular vs React vs Vue (think of Pros and Cons)
+- Angular: for large bank with massive codebase
+- Angular: a full framework, everyone sticks to the rules
+- React: for a company with a strong developer team
+- React: need to be flexible and evolve by adding different libraries and tools to the ecosystems
+- React: simple way of writing code
+- Vue: Super easy to pick up
+- Critical Render Path
+  - JS Delivery
+  - Minimise DOM manipulation with JS
+  - Minimise re-rendering
+- Why use Redux?
+  - Good for managing large state
+  - Useful for sharing data between containers
+  - Predictable state management using the 3 principles
+    - Single source of truth
+    - State is read only
+    - Changes using pure functions
+  - Action -> Reducer -> Redux Store -> Make changes in Components
+  - Resources: [Webpack 4 Configurator](http://web.jakoblind.no/webpack-config)
 
 **[⬆ back to top](#table-of-contents)**
