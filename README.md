@@ -277,4 +277,20 @@
   - [Route-based code splitting](https://reactjs.org/docs/code-splitting.html#route-based-code-splitting)
   - Component based Code Splitting
     - Example: [react-loadable](https://github.com/jamiebuilds/react-loadable)
+  - Use React.lazy and Suspense
+- React Performance Optimizations
+  - http://localhost:3000/?react_perf
+  - See react components in performance tab
+  - Redux can update any leaf component
+  - Update any parent component will update all child components
+  - [Why Did You Render](https://github.com/welldone-software/why-did-you-render)
+- Optimizing Code Review
+  - Only load what's needed:
+    - Code Splitting
+    - Tree Shaking
+  - Avoid blocking main thread
+  - Avoid memory leaks
+  - Avoid multiple re-rendering
+- [Tree Shaking 101](https://developers.google.com/web/fundamentals/performance/optimizing-javascript/tree-shaking/)
+  
 **[⬆ back to top](#table-of-contents)**
