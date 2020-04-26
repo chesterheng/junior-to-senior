@@ -8,6 +8,7 @@ const googleDatabase = [
   'myfavouritecats2.com'
 ]
 
+// dependency injection for db
 const googleSearch = (searchInput, db) => {
   const matches = db.filter(website => website.includes(searchInput))
 

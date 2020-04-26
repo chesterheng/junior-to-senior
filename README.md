@@ -360,5 +360,11 @@
     - Read the test
     - Run the test
     - Output code coverage
+- Upcoming API Endpoint
+  - [Star Wars API](http://swapi.py4e.com/) or [Star Wars API (clone)](https://swapi.dev/)
+  - [Numbers API](http://numbersapi.com/#42)
+  - [Chuck Norris API](https://api.chucknorris.io/)
+  - [Pokemon API](https://pokeapi.co/)
+- [Jest Cheat Sheet](https://github.com/sapegin/jest-cheat-sheet)
 
 **[⬆ back to top](#table-of-contents)**
