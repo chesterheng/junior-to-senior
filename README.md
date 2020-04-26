@@ -366,5 +366,10 @@
   - [Chuck Norris API](https://api.chucknorris.io/)
   - [Pokemon API](https://pokeapi.co/)
 - [Jest Cheat Sheet](https://github.com/sapegin/jest-cheat-sheet)
+- [Enzyme](https://enzymejs.github.io/enzyme/docs/api/)
+  - Shallow Render (shallow): render current component only, not parent and child
+  - Static Render (render): render current component and child
+  - Full Render (mount): render entire dom
+
 
 **[⬆ back to top](#table-of-contents)**
