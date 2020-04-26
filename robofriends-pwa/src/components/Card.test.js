@@ -11,7 +11,11 @@ describe('Card', () => {
     // shallow render current component only
     // not parent or child component
     // use shallow most of the time
-    expect(shallow(<Card />).length).toEqual(1)
+    expect(shallow(<Card />).length).toEqual(1);
+  })
+
+  it('expect to render Card component snapshot', () => {
+    expect(shallow(<Card />)).toMatchSnapshot();
   })
 
 })
