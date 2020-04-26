@@ -8,6 +8,7 @@
   - [**Section 3: Performance Part 1**](#section-3-performance-part-1)
   - [**Section 4: React + Redux + Module Bundling**](#section-4-react--redux--module-bundling)
   - [**Section 5: Performance Part 2**](#section-5-performance-part-2)
+  - [**Section 6: Testing**](#section-6-testing)
 
 ## **Section 2: SSH**
 
@@ -320,5 +321,44 @@
   - [create-react-pwa](https://github.com/jeffposnick/create-react-pwa/compare/starting-point...pwa)
   - [Introduction to Progressive Web Apps](https://auth0.com/blog/introduction-to-progressive-web-apps-push-notifications-part-3/)
   - [Progressive Tooling](https://progressivetooling.com/)
+
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 6: Testing**
+
+- Types of Tests
+  - Unit Tests
+  - Integration Tests
+  - Automation Tests
+- Testing Tools and Framework (BDD)
+  - Testing libraries: Jasmine, Jest, Mocha
+  - Assertion libraries: Jasmine, Jest, chai
+  - Test runner: Jasmine, Jest, Mocha, Karma
+    - DOM, Puppeteer, jsdom
+  - Mock, Spy and Stub: Jasmine, Jest, Sinon.js
+  - Code Coverage: Istanbul, Jest
+    - ```npm test -- --coverage```
+- React Testing
+  - Snapshot
+  - Enzyme
+- Unit Tests
+  - Test pure functions
+  - Don't test the contract 
+    - server and database
+- Integration Tests
+  - cross commmunications between units of code
+  - Spy to ensure expect side-effect
+  - Stub to mock and modify part of process (mock database call)
+- Automation Tests (e2e Tests)
+  - Entire process of UI Tests runnning in a browser
+  - Simulate user behaviors
+  - Hardest to setup (Different platform)
+  - Examples: Nightwatch, Web Driver IO, TestCafe, Nightmare, Cypress
+- Final Note on Testing
+  - Production: App.js, DOM, Puppeteer (headless browser)
+  - Development: App.test.js, jsdom
+    - Read the test
+    - Run the test
+    - Output code coverage
 
 **[⬆ back to top](#table-of-contents)**
