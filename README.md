@@ -292,5 +292,33 @@
   - Avoid memory leaks
   - Avoid multiple re-rendering
 - [Tree Shaking 101](https://developers.google.com/web/fundamentals/performance/optimizing-javascript/tree-shaking/)
-  
+- Progressive Web Apps
+  - [What Web Can Do Today](https://whatwebcando.today)
+  - [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+  - [Top PWAs](https://appsco.pe/)
+  - [Pokedex](https://pokedex.org/)
+  - [Hacker News readers as Progressive Web Apps](https://hnpwa.com/)
+- 3 important parts
+  - HTTPS
+  - App Mainfest
+  - Service Worker
+- [Progressive Web App checklist](https://web.dev/pwa-checklist/)
+- HTTPS
+  - [Let's Encrypt](https://letsencrypt.org/)
+  - [Cloudflare CDN](https://www.cloudflare.com/)
+  - [Github Pages](https://pages.github.com)
+- App Mainfest
+  - [Viewport Meta Tag](https://developers.google.com/web/tools/lighthouse/audits/has-viewport-meta-tag)
+  - [Favicon Generator. For real.](https://realfavicongenerator.net/)
+- Service Worker
+  - [Is Service Worker Ready?](https://jakearchibald.github.io/isserviceworkerready/)
+  - How it work?
+    1.  Request to service worker
+    2.  Access Cache API (Web API)
+    3.  Not available in Cache API
+    4.  Request from backend
+  - [create-react-pwa](https://github.com/jeffposnick/create-react-pwa/compare/starting-point...pwa)
+  - [Introduction to Progressive Web Apps](https://auth0.com/blog/introduction-to-progressive-web-apps-push-notifications-part-3/)
+  - [Progressive Tooling](https://progressivetooling.com/)
+
 **[⬆ back to top](#table-of-contents)**
