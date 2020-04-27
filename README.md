@@ -372,5 +372,6 @@
   - Full Render (mount): render entire dom
 - [Nock](https://github.com/nock/nock)
 - [SuperTest](https://github.com/visionmedia/supertest)
+- [What Test is Best?](https://blog.usejournal.com/lean-testing-or-why-unit-tests-are-worse-than-you-think-b6500139a009)
 
 **[⬆ back to top](#table-of-contents)**
