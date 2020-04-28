@@ -9,6 +9,7 @@
   - [**Section 4: React + Redux + Module Bundling**](#section-4-react--redux--module-bundling)
   - [**Section 5: Performance Part 2**](#section-5-performance-part-2)
   - [**Section 6: Testing**](#section-6-testing)
+  - [**Section 7: TypeScript**](#section-7-typescript)
 
 ## **Section 2: SSH**
 
@@ -373,5 +374,41 @@
 - [Nock](https://github.com/nock/nock)
 - [SuperTest](https://github.com/visionmedia/supertest)
 - [What Test is Best?](https://blog.usejournal.com/lean-testing-or-why-unit-tests-are-worse-than-you-think-b6500139a009)
+
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 7: TypeScript**
+
+- [Dynamic vs Static Typing](https://android.jlelse.eu/magic-lies-here-statically-typed-vs-dynamically-typed-languages-d151c7f95e2b)
+- Static Typed language Pros
+  - Static Typed language is self documented
+  - Static Typed language help in auto-complete in IDE
+  - Less bugs in production
+- Static Typed language Cons
+  - More Complex, more time to learn
+  - Testing is still required
+  - Slower development process
+- Dynamic Typed language Pros
+  - Less time to develop
+  - More flexible
+- TypeScript = JavaScript + Type Safe
+- Strong Typed language
+  - Cannot operate on 2 different types
+- Weak Typed language
+  - Type coercion
+- Static Typing In Javascript
+  - [Flow](https://flow.org/)
+    - Static Type Checker
+    - Flow -> Babel -> JS
+    - [Create React App](https://flow.org/en/docs/tools/create-react-app/)
+  - [Elm](https://elm-lang.org/)
+  - [Reason ML](https://reasonml.github.io/)
+  - [TypeScript](https://www.typescriptlang.org/)
+    - [TypeScript Editor Support](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support)
+    - ```tsc --init```
+    - ```tsc typescript.ts --watch```
+  - [Interface vs Type alias in TypeScript 2.7](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)
+  - [Typescript: Interfaces vs. Type Aliases](https://www.briangonzalez.org/post/interface-types-vs-type-aliases-typescript)
+- [Type Assertion](https://basarat.gitbook.io/typescript/type-system/type-assertion)
 
 **[⬆ back to top](#table-of-contents)**
