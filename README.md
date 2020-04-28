@@ -410,5 +410,7 @@
   - [Interface vs Type alias in TypeScript 2.7](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)
   - [Typescript: Interfaces vs. Type Aliases](https://www.briangonzalez.org/post/interface-types-vs-type-aliases-typescript)
 - [Type Assertion](https://basarat.gitbook.io/typescript/type-system/type-assertion)
+- [DefinitelyTyped](https://definitelytyped.org/)
+- [Adding TypeScript](https://create-react-app.dev/docs/adding-typescript/)
 
 **[⬆ back to top](#table-of-contents)**
