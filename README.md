@@ -412,5 +412,7 @@
 - [Type Assertion](https://basarat.gitbook.io/typescript/type-system/type-assertion)
 - [DefinitelyTyped](https://definitelytyped.org/)
 - [Adding TypeScript](https://create-react-app.dev/docs/adding-typescript/)
+- Small team: focus on features + unit tests + no time for typescript
+- Need to make tough decision
 
 **[⬆ back to top](#table-of-contents)**
