@@ -10,6 +10,7 @@
   - [**Section 5: Performance Part 2**](#section-5-performance-part-2)
   - [**Section 6: Testing**](#section-6-testing)
   - [**Section 7: TypeScript**](#section-7-typescript)
+  - [**Section 9: Security**](#section-9-security)
 
 ## **Section 2: SSH**
 
@@ -338,13 +339,13 @@
     - DOM, Puppeteer, jsdom
   - Mock, Spy and Stub: Jasmine, Jest, Sinon.js
   - Code Coverage: Istanbul, Jest
-    - ```npm test -- --coverage```
+    - `npm test -- --coverage`
 - React Testing
   - Snapshot
   - Enzyme
 - Unit Tests
   - Test pure functions
-  - Don't test the contract 
+  - Don't test the contract
     - server and database
 - Integration Tests
   - cross commmunications between units of code
@@ -405,8 +406,8 @@
   - [Reason ML](https://reasonml.github.io/)
   - [TypeScript](https://www.typescriptlang.org/)
     - [TypeScript Editor Support](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support)
-    - ```tsc --init```
-    - ```tsc typescript.ts --watch```
+    - `tsc --init`
+    - `tsc typescript.ts --watch`
   - [Interface vs Type alias in TypeScript 2.7](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)
   - [Typescript: Interfaces vs. Type Aliases](https://www.briangonzalez.org/post/interface-types-vs-type-aliases-typescript)
 - [Type Assertion](https://basarat.gitbook.io/typescript/type-system/type-assertion)
@@ -416,3 +417,45 @@
 - Need to make tough decision
 
 **[⬆ back to top](#table-of-contents)**
+
+## **Section 9: Security**
+
+- Star of Security
+  - Injections
+  - 3rd party libraries
+  - Logging
+  - Authentication
+  - Don't trust anyone
+  - Data management
+  - Access control
+  - Secure headers
+  - Code secrets
+  - XSS & CSRF
+  - Https everywhere
+- Injections
+  - [SQL Injection](https://www.hacksplaining.com/exercises/sql-injection)
+    - eg. Add in password field: 'or 1=1--
+    - eg. Insert into a new row: '; DROP TABLE users; --
+    ```CREATE TABLE sqlinjection (
+        id serial PRIMARY KEY,
+        email text UNIQUE NOT NULL
+      );
+
+    INSERT INTO sqlinjection (email)
+    VALUES (; DROP TABLE sqlinjection; --);
+    ```
+  - [PostgreSQL](https://www.postgresql.org/download/macosx/)
+  - [PostgreSQL GUI tool for macOS](http://www.psequel.com)
+  - Code injection Exercise: Start Security-server, then security-client
+  - Key in ```<img src='/' onerror="alert('boom')">```
+- Solution:
+  - Sanitize input with white and black list
+  - Parametrize Queries: Use object relational mapper
+  ```
+    const sqlSelect = (name, email, id) => {
+      if(name === number)
+    }
+  ```
+  - [Knex.js](http://knexjs.org/) or other ORMS
+
+  **[⬆ back to top](#table-of-contents)**
