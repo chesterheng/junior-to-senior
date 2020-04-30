@@ -12,7 +12,14 @@ app.use(helmet())
 app.use(bodyParser.json())
 app.use(morgan('tiny'))
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => {
+  res.cookie('session', '1', { httpOnly: true })
+  res.cookie('session', '1', { secure: true})
+  res.set({
+    'Content-Security-Policy': "script-src 'self'"
+  })
+  res.send('Hello World!')
+})
 
 app.post('/secret', (req, res) => {
   const { userInput } = req.body;
