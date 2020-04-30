@@ -456,6 +456,14 @@
       if(name === number)
     }
   ```
-  - [Knex.js](http://knexjs.org/) or other ORMS
+   - [Knex.js](http://knexjs.org/) or other ORMS
+- 3rd party libraries
+  - [The Node Security Platform service is shutting down 9/30](https://blog.npmjs.org/post/175511531085/the-node-security-platform-service-is-shutting)
+  - [Announcing npm@6](https://medium.com/npm-inc/announcing-npm-6-5d0b1799a905)
+    - ```npm audit```
+  - [Snyk](https://github.com/snyk/snyk)
+    - ```sudo npm i -g snyk```
+    - ```snyk auth```
+    - ```snyk test```
 
   **[⬆ back to top](#table-of-contents)**
