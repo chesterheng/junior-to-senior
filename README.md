@@ -424,14 +424,15 @@
   - Injections
   - 3rd party libraries
   - Logging
-  - Authentication
-  - Don't trust anyone
-  - Data management
-  - Access control
-  - Secure headers
-  - Code secrets
-  - XSS & CSRF
   - Https everywhere
+  - XSS & CSRF
+  - Code secrets
+  - Secure headers
+  - Access control
+  - Data management
+  - Don't trust anyone
+  - Authentication
+
 - Injections
   - [SQL Injection](https://www.hacksplaining.com/exercises/sql-injection)
     - eg. Add in password field: 'or 1=1--
@@ -465,5 +466,11 @@
     - ```sudo npm i -g snyk```
     - ```snyk auth```
     - ```snyk test```
+- Logging
+  - [Insufficient Logging & Monitoring](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A10-Insufficient_Logging%252526Monitoring)
+  - [winston](https://github.com/winstonjs/winston)
+    - advanced console log
+  - [morgan](https://github.com/expressjs/morgan)
+    - monitor api request
 
   **[⬆ back to top](#table-of-contents)**
