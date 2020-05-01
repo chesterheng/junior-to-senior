@@ -521,5 +521,10 @@
   - Example: [cors](https://github.com/expressjs/cors)
     - Don't give public access to server
     - Give access to people you trust, add a white list
+- Data Management
+  - bcrypt, scrypt, Aragon2
+  - pgcrypto - encrypt a few columns
+  - password storage
+  - [How to Store User Passwords and Overcome Security Threats in 2017](https://rangle.io/blog/how-to-store-user-passwords-and-overcome-security-threats-in-2017/)
 
 **[⬆ back to top](#table-of-contents)**

@@ -1,0 +1,26 @@
+{
+  "name": "junior-to-senior",
+  "version": "1.0.0",
+  "description": "## Table of Contents",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chesterheng/junior-to-senior.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chesterheng/junior-to-senior/issues"
+  },
+  "homepage": "https://github.com/chesterheng/junior-to-senior#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.1"
+  }
+}
