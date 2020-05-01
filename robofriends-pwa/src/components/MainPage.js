@@ -10,6 +10,8 @@ import './MainPage.css';
 
 class MainPage extends Component {
   componentDidMount() {
+    console.log(process.env.NODE_ENV);
+    console.log(process.env.REACT_APP_SAY_HI);
     this.props.onRequestRobots();
   }
 

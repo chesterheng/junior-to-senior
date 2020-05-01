@@ -494,7 +494,7 @@
     - Send cookie of the current login website to a malicious site
     - [httpbin.org](https://httpbin.org)
     - Solution: Block in document's Content Security Policy
-  - Summary
+  - XSS and CSRF Summary
     - Sanitize input
     - No eval()
     - No document.write() 
@@ -504,5 +504,11 @@
       - Secure: Cookies send over https
       - HTTPOnly: Prevents cookies from being accessed by client side scripting
     - [csurf](https://github.com/expressjs/csurf)
+- Code Secrets
+  - [Environmental Variables](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+    - Add into .env. Example: ```REACT_APP_API_URL=https://swapi.py4e.com/api```
+  - Commit History
+    - use .gitignore file to avoid commit secret or password to github
+    - [Do NOT commit password to github](https://github.com/search?q=remove+password&type=Commits)
 
 **[⬆ back to top](#table-of-contents)**
