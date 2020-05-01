@@ -510,5 +510,11 @@
   - Commit History
     - use .gitignore file to avoid commit secret or password to github
     - [Do NOT commit password to github](https://github.com/search?q=remove+password&type=Commits)
+- Secure Headers
+  - [helmet](https://helmetjs.github.io/)
+  - [HTTP: The Protocol Every Web Developer Must Know - Part 1](https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
+  - [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
+  - [HTTP - Header Fields](https://www.tutorialspoint.com/http/http_header_fields.htm)
+  - [Helmet](https://github.com/helmetjs/helmet)
 
 **[⬆ back to top](#table-of-contents)**
