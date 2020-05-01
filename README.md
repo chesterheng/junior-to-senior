@@ -531,5 +531,11 @@
   - Client <-> 3rd Party API
   - [ratelimiter](https://github.com/tj/node-ratelimiter)
   - How to prevent bad actors?
+-Authentication
+  - Session-Based Authentication
+  - Token-Based Authentication
+  - Exercise: #4 - Optional [Hacking](https://www.hacksplaining.com/lessons)
+  - Resource: [Personal Security](https://watchyourhack.com/)
+  - Resource: [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
 
 **[⬆ back to top](#table-of-contents)**
