@@ -526,5 +526,10 @@
   - pgcrypto - encrypt a few columns
   - password storage
   - [How to Store User Passwords and Overcome Security Threats in 2017](https://rangle.io/blog/how-to-store-user-passwords-and-overcome-security-threats-in-2017/)
+- Don't Trust Anyone (need to monitor all areas)
+  - Client <-> Server <-> Database
+  - Client <-> 3rd Party API
+  - [ratelimiter](https://github.com/tj/node-ratelimiter)
+  - How to prevent bad actors?
 
 **[⬆ back to top](#table-of-contents)**
