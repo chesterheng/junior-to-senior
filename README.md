@@ -516,5 +516,10 @@
   - [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
   - [HTTP - Header Fields](https://www.tutorialspoint.com/http/http_header_fields.htm)
   - [Helmet](https://github.com/helmetjs/helmet)
+- Access Control
+  - Principal of least privilege
+  - Example: [cors](https://github.com/expressjs/cors)
+    - Don't give public access to server
+    - Give access to people you trust, add a white list
 
 **[⬆ back to top](#table-of-contents)**
