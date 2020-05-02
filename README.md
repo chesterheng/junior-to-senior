@@ -479,6 +479,7 @@ app.get('/', (request, response) => {
 - Dynamic Apps with Next.js
   - Initial refresh: console.log on server
   - Revisiting the page: console.log on client
+- [Deploying Next.js Apps](https://vercel.com/home)
 
 **[⬆ back to top](#table-of-contents)**
 
