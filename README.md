@@ -12,6 +12,7 @@
   - [**Section 7: TypeScript**](#section-7-typescript)
   - [**Section 8: SPA vs Server Side Rendering**](#section-8-spa-vs-server-side-rendering)
   - [**Section 9: Security**](#section-9-security)
+  - [**Section 10: Code Analysis**](#section-10-code-analysis)
 
 ## **Section 2: SSH**
 
@@ -620,5 +621,15 @@ app.get('/', (request, response) => {
   - Exercise: #4 - Optional [Hacking](https://www.hacksplaining.com/lessons)
   - Resource: [Personal Security](https://watchyourhack.com/)
   - Resource: [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
+
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 10: Code Analysis**
+- Setting Up Your Environment
+  - Client: smart-brain
+  - Server: smart-brain-api
+  - Database: PostgreSQL
+    - [PSequel GUI](http://www.psequel.com)
+  - 3rd Party API: [clarifai](https://www.clarifai.com)
 
 **[⬆ back to top](#table-of-contents)**
