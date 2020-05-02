@@ -669,6 +669,7 @@ app.get('/', (request, response) => {
   - Image: Bundle your application into a standalone package that can live inside of a container
   - Image: the file that describes what the container should do
   - [docker hub](https://hub.docker.com/): similar to npm
+- [Installing Docker](https://docs.docker.com/docker-for-mac/install/)
 - Dockerfile
 - Docker Commands
 - Docker Compose
