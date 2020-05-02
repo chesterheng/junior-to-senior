@@ -474,6 +474,8 @@ app.get('/', (request, response) => {
   - [NEXT.js](https://nextjs.org/) - build dynamic applications
 - Client Side Routing: use Link component
 - Server Side Routing: use a html tag
+- [Server-side vs Client-side Routing](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f)
+- [Tech tip: How to do hard refresh in Chrome, Firefox and IE?](https://www.getfilecloud.com/blog/2015/03/tech-tip-how-to-do-hard-refresh-in-browsers/#.XqzusxMzZhE)
 
 **[⬆ back to top](#table-of-contents)**
 
