@@ -694,5 +694,7 @@ app.get('/', (request, response) => {
   - [docker-compose build](https://docs.docker.com/compose/reference/build/)
   - [docker-compose run](https://docs.docker.com/compose/reference/run/)
   - [docker-compose up](https://docs.docker.com/compose/reference/up/)
+  - [What is the purpose of VOLUME in Dockerfile](https://stackoverflow.com/questions/34809646/what-is-the-purpose-of-volume-in-dockerfile)
+  - [Docker Volumes and Networks with Compose](https://www.linux.com/topic/cloud/docker-volumes-and-networks-compose/)
 
 **[⬆ back to top](#table-of-contents)**

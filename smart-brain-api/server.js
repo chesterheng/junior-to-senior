@@ -28,7 +28,7 @@ app.use(morgan('combined'))
 app.use(cors())
 app.use(bodyParser.json());
 
-app.get('/', (req, res)=> { res.send("hello") })
+app.get('/', (req, res)=> { res.send("hello 1234") })
 app.post('/signin', signin.handleSignin(db, bcrypt))
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
 app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db)})
