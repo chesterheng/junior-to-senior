@@ -686,5 +686,13 @@ app.get('/', (request, response) => {
   - Stop running container: ```docker stop 7464fd583963```
   - Port forwarding: ```docker run -it -p 3000:3000 smartbrainservercontainer```
 - Docker Compose
+  - is a tool for defining and running multi-container Docker applications. 
+  - edit docker-compose.yml
+  - Build: ```docker-compose build```
+  - Run #1: ```docker-compose run --service-ports smart-brain-api```
+  - Run #2: ```docker-compose up --build```
+  - [docker-compose build](https://docs.docker.com/compose/reference/build/)
+  - [docker-compose run](https://docs.docker.com/compose/reference/run/)
+  - [docker-compose up](https://docs.docker.com/compose/reference/up/)
 
 **[⬆ back to top](#table-of-contents)**
