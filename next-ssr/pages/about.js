@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from '../components/Image'
 
 const About = () => {
   return (
@@ -10,6 +11,7 @@ const About = () => {
       <Link href="/">
         <button>Back</button>
       </Link>
+      <Image />
       <p>I learn SSR</p>
     </div>
   );
