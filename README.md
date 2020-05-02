@@ -480,6 +480,11 @@ app.get('/', (request, response) => {
   - Initial refresh: console.log on server
   - Revisiting the page: console.log on client
 - [Deploying Next.js Apps](https://vercel.com/home)
+- Updating To Latest Version Of Next.js
+  - [Create Next App](https://create-next-app.js.org/)
+  - ```npm audit fix --force``
+  - ```npm update```
+  - ```npm i next@latest```
 
 **[⬆ back to top](#table-of-contents)**
 
