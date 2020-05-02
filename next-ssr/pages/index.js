@@ -7,6 +7,9 @@ const Index = () => (
     <Link href="/about">
       <button>About</button>
     </Link>
+    <Link href="/robots">
+      <button>Robots</button>
+    </Link>
     {/* Server Side Routing */}
     {/* <a href="/about">About</a> */}
   </div>

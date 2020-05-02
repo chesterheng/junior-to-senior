@@ -476,6 +476,9 @@ app.get('/', (request, response) => {
 - Server Side Routing: use a html tag
 - [Server-side vs Client-side Routing](https://medium.com/@wilbo/server-side-vs-client-side-routing-71d710e9227f)
 - [Tech tip: How to do hard refresh in Chrome, Firefox and IE?](https://www.getfilecloud.com/blog/2015/03/tech-tip-how-to-do-hard-refresh-in-browsers/#.XqzusxMzZhE)
+- Dynamic Apps with Next.js
+  - Initial refresh: console.log on server
+  - Revisiting the page: console.log on client
 
 **[⬆ back to top](#table-of-contents)**
 
