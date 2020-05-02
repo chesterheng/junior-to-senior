@@ -672,7 +672,11 @@ app.get('/', (request, response) => {
 - [Installing Docker](https://docs.docker.com/docker-for-mac/install/)
 - Dockerfile
   - [```bin/bash```](https://unix.stackexchange.com/questions/398543/what-are-the-contents-of-bin-bash-and-what-do-i-do-if-i-accidentally-overwrote)
-- Docker Commands
+  - RUN: execute and stack image in docker container
+  - CMD: exexute when enter docker container, only one CMD
+  - Outside host cannot access to container by default
+  - Port binding
+- [Docker Commands](https://docs.docker.com/engine/reference/builder/#usage)
   - Build Server Image: ```docker build -t smartbrainservercontainer .```
   - Build Client Image: ```docker build -t smartbrainclientcontainer .```
   - Run and Enter container: ```docker run -it smartbrainservercontainer```
@@ -680,6 +684,7 @@ app.get('/', (request, response) => {
   - List all container: ```docker ps```
   - Enter a container running in background: ```docker exec -it 7464fd583963 bash```
   - Stop running container: ```docker stop 7464fd583963```
+  - Port forwarding: ```docker run -it -p 3000:3000 smartbrainservercontainer```
 - Docker Compose
 
 **[⬆ back to top](#table-of-contents)**
