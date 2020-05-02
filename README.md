@@ -443,6 +443,7 @@
   - Client: Receive a fully rendered page initial
   - Client: ReactDOM.hydrate()
   - Client: Attached event listeners to the fully rendered page
+
 ```
 // server.js - ssr
 import express from "express";
@@ -462,6 +463,7 @@ app.get('/', (request, response) => {
   })
 });
 ```
+
 - CSR vs SSR Part 2
   - CSR Pros: Rich Interactions, Faster Response and Web Applications
   - CSR Cons: Low SEO potential, Longer initial load
@@ -470,6 +472,8 @@ app.get('/', (request, response) => {
 - SSR React Libraries
   - [Gatsby](https://www.gatsbyjs.org/) - Static sites
   - [NEXT.js](https://nextjs.org/) - build dynamic applications
+- Client Side Routing: use Link component
+- Server Side Routing: use a html tag
 
 **[⬆ back to top](#table-of-contents)**
 
