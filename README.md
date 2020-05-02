@@ -671,6 +671,11 @@ app.get('/', (request, response) => {
   - [docker hub](https://hub.docker.com/): similar to npm
 - [Installing Docker](https://docs.docker.com/docker-for-mac/install/)
 - Dockerfile
+  - terminal
+    - ```docker build -t smartbrainservercontainer .```
+    - ```docker build -t smartbrainclientcontainer .```
+    - Enter docker container: ```docker run -it smartbrainservercontainer```
+    - [```bin/bash```](https://unix.stackexchange.com/questions/398543/what-are-the-contents-of-bin-bash-and-what-do-i-do-if-i-accidentally-overwrote)
 - Docker Commands
 - Docker Compose
 
