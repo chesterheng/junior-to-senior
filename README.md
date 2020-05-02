@@ -483,9 +483,9 @@ app.get('/', (request, response) => {
 - [Deploying Next.js Apps](https://vercel.com/home)
 - Updating To Latest Version Of Next.js
   - [Create Next App](https://create-next-app.js.org/)
-  - ```npm audit fix --force``
-  - ```npm update```
-  - ```npm i next@latest```
+  - ``npm audit fix --force`
+  - `npm update`
+  - `npm i next@latest`
 - [JavaScript SEO](https://developers.google.com/search/docs/guides/javascript-seo-basics)
   - [prerender](https://prerender.io/)
 - [When everything's important, nothing is!](https://aerotwist.com/blog/when-everything-is-important-nothing-is/)
@@ -493,7 +493,7 @@ app.get('/', (request, response) => {
   - Progressive Rendering: Code-spiltting
     - Example: [flipkart](https://www.flipkart.com)
     - Example: [aliexpress](https://www.aliexpress.com)
- 
+
 **[⬆ back to top](#table-of-contents)**
 
 ## **Section 9: Security**
@@ -625,11 +625,31 @@ app.get('/', (request, response) => {
 **[⬆ back to top](#table-of-contents)**
 
 ## **Section 10: Code Analysis**
+
 - Setting Up Your Environment
   - Client: smart-brain
   - Server: smart-brain-api
   - Database: PostgreSQL
     - [PSequel GUI](http://www.psequel.com)
   - 3rd Party API: [clarifai](https://www.clarifai.com)
+- How To Analyze Code
+  - Look at API first: smart-brain-api
+    - Folder structure
+    - package.json
+    - Readme
+    - Entry point
+    - start from server.js
+    - goto each controller
+  - Frontend App
+    - look at src folder
+    - start with index.js
+    - goto entry point App.js
+    - look at initialState
+    - look at event handler
+    - look at jsx to figure out the layout
+  - See what can be improved?
+  - Look at the code in an unemotional way
+  - Goal is to integrate into the tech team
+  - Do not criticize as you have no idea how decision is made in the past
 
 **[⬆ back to top](#table-of-contents)**
