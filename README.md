@@ -671,12 +671,15 @@ app.get('/', (request, response) => {
   - [docker hub](https://hub.docker.com/): similar to npm
 - [Installing Docker](https://docs.docker.com/docker-for-mac/install/)
 - Dockerfile
-  - terminal
-    - ```docker build -t smartbrainservercontainer .```
-    - ```docker build -t smartbrainclientcontainer .```
-    - Enter docker container: ```docker run -it smartbrainservercontainer```
-    - [```bin/bash```](https://unix.stackexchange.com/questions/398543/what-are-the-contents-of-bin-bash-and-what-do-i-do-if-i-accidentally-overwrote)
+  - [```bin/bash```](https://unix.stackexchange.com/questions/398543/what-are-the-contents-of-bin-bash-and-what-do-i-do-if-i-accidentally-overwrote)
 - Docker Commands
+  - Build Server Image: ```docker build -t smartbrainservercontainer .```
+  - Build Client Image: ```docker build -t smartbrainclientcontainer .```
+  - Run and Enter container: ```docker run -it smartbrainservercontainer```
+  - Run container in the background: ```docker run -it -d smartbrainservercontainer```
+  - List all container: ```docker ps```
+  - Enter a container running in background: ```docker exec -it 7464fd583963 bash```
+  - Stop running container: ```docker stop 7464fd583963```
 - Docker Compose
 
 **[⬆ back to top](#table-of-contents)**
