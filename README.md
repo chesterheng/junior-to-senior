@@ -13,6 +13,7 @@
   - [**Section 8: SPA vs Server Side Rendering**](#section-8-spa-vs-server-side-rendering)
   - [**Section 9: Security**](#section-9-security)
   - [**Section 10: Code Analysis**](#section-10-code-analysis)
+  - [**Section 11: Docker**](#section-11-docker)
 
 ## **Section 2: SSH**
 
@@ -651,5 +652,25 @@ app.get('/', (request, response) => {
   - Look at the code in an unemotional way
   - Goal is to integrate into the tech team
   - Do not criticize as you have no idea how decision is made in the past
+
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 11: Docker**
+
+- Docker Containers
+  - Why did this tool get built?
+  - Why did people spend time and money creating it with any tools that we use?
+  - [Containers vs. Virtual Machines](https://blog.netapp.com/blogs/containers-vs-vms/)
+  - Containers: lightweight alternative to virtualization
+  - Containers: use host operating system
+  - Containers: bundle only their libraries and settings required for your application
+  - Host has Container Has Image
+  - Environment in the container is isolated from host machine
+  - Image: Bundle your application into a standalone package that can live inside of a container
+  - Image: the file that describes what the container should do
+  - [docker hub](https://hub.docker.com/): similar to npm
+- Dockerfile
+- Docker Commands
+- Docker Compose
 
 **[⬆ back to top](#table-of-contents)**
