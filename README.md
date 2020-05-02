@@ -485,7 +485,14 @@ app.get('/', (request, response) => {
   - ```npm audit fix --force``
   - ```npm update```
   - ```npm i next@latest```
-
+- [JavaScript SEO](https://developers.google.com/search/docs/guides/javascript-seo-basics)
+  - [prerender](https://prerender.io/)
+- [When everything's important, nothing is!](https://aerotwist.com/blog/when-everything-is-important-nothing-is/)
+  - SSR example: [React documentation](https://reactjs.org/docs/getting-started.html)
+  - Progressive Rendering: Code-spiltting
+    - Example: [flipkart](https://www.flipkart.com)
+    - Example: [aliexpress](https://www.aliexpress.com)
+ 
 **[⬆ back to top](#table-of-contents)**
 
 ## **Section 9: Security**
