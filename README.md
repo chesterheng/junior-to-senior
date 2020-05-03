@@ -688,16 +688,20 @@ app.get('/', (request, response) => {
 - Docker Compose
   - is a tool for defining and running multi-container Docker applications. 
   - edit docker-compose.yml
-  - Build: ```docker-compose build```
-  - Run #1: ```docker-compose run --service-ports smart-brain-api```
-  - Run #2: ```docker-compose up --build```
+  - Shutdown: ```docker-compose down```
+  - Build container and run all services: ```docker-compose up --build```
+  - Build container: ```docker-compose build```
+  - Run all services in background: ```docker-compose up -d```
+  - Run a specific service: ```docker-compose run --service-ports smart-brain-api```
+  - Run a specific service and enter bash: ```docker-compose exec smart-brain-api bash```
   - [docker-compose build](https://docs.docker.com/compose/reference/build/)
   - [docker-compose run](https://docs.docker.com/compose/reference/run/)
   - [docker-compose up](https://docs.docker.com/compose/reference/up/)
   - [What is the purpose of VOLUME in Dockerfile](https://stackoverflow.com/questions/34809646/what-is-the-purpose-of-volume-in-dockerfile)
   - [Docker Volumes and Networks with Compose](https://www.linux.com/topic/cloud/docker-volumes-and-networks-compose/)
-  - Shutdown: ```docker-compose down```
-  - Run in background: ```docker-compose up -d```
-  - Run service and enter bash: ```docker-compose exec smart-brain-api bash```
+- PostgresSQL
+  - [postgres](https://hub.docker.com/_/postgres/)
+  - [psql](https://www.postgresql.org/docs/9.2/app-psql.html)
+  - [Getting Started with PostgreSQL on Mac OSX](https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb)
 
 **[⬆ back to top](#table-of-contents)**
