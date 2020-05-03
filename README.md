@@ -14,6 +14,7 @@
   - [**Section 9: Security**](#section-9-security)
   - [**Section 10: Code Analysis**](#section-10-code-analysis)
   - [**Section 11: Docker**](#section-11-docker)
+  - [**Section 12: Redis**](#section-12-redis)
 
 ## **Section 2: SSH**
 
@@ -707,5 +708,28 @@ app.get('/', (request, response) => {
   - [docker network create](https://docs.docker.com/engine/reference/commandline/network_create/)
   - [Networking in Compose](https://docs.docker.com/compose/networking/)
   - [docker-compose: difference between network and link](https://stackoverflow.com/questions/41294305/docker-compose-difference-between-network-and-link)
+
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 12: Redis**
+
+- [Redis](https://redis.io/) NoSQL in memory database
+- Use for short live data, e.g. sessions, web page headcount
+- Redis take a snapshot and store on disk
+- NoSQL Databases
+  - Key - Value: redis
+  - Document: mongoDB, CouchDB
+  - Wide Column: cassandra
+  - Graph: neo4j
+- RelationalDB (SQL)
+  - users.txt
+  - tweets.txt
+  - profile.txt
+  - following.txt
+- MongoDB (MongoDB query)
+  - users1.txt
+  - users2.txt
+  - users3.txt
+- [SQL vs. NoSQL Databases: What’s the Difference?](https://www.upwork.com/hiring/data/sql-vs-nosql-databases-whats-the-difference/)
 
 **[⬆ back to top](#table-of-contents)**
