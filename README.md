@@ -15,6 +15,7 @@
   - [**Section 10: Code Analysis**](#section-10-code-analysis)
   - [**Section 11: Docker**](#section-11-docker)
   - [**Section 12: Redis**](#section-12-redis)
+  - [**Section 13: JWT + Sessions**](#section-13-jwt--sessions)
 
 ## **Section 2: SSH**
 
@@ -765,5 +766,22 @@ app.get('/', (request, response) => {
     - Set key and score member: ```zadd team 1 "Bolts"```
     - Show 2 items in set from left: ```zrange team 0 2```
     - Get item position in: ```zrank team "Wizard"```
+
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 13: JWT + Sessions**
+
+- [Cookie vs. Token Authentication](https://dzone.com/articles/cookies-vs-tokens-the-definitive-guide)
+- Cookie is stateful. Need to store in database to track
+- Token is stateless. Don't need to store in database
+- Token is stateless. Browser will destroy the token when user sign out
+  - Pro: Stateless. Backend can check validity
+  - Pro: Can store user info in token
+  - Pro: Easy to work with different APIs
+  - Pro: Can serve both browser and mobile platform
+  - Con: Size of JWT is larger than cookie
+  - Con: Stolen JWT can decode to see info in JWT
+- [Token Authentication vs. Cookies](https://stackoverflow.com/questions/17000835/token-authentication-vs-cookies)
+- [Why JWTs Suck as Session Tokens](https://scotch.io/bar-talk/why-jwts-suck-as-session-tokens)
 
 **[⬆ back to top](#table-of-contents)**
