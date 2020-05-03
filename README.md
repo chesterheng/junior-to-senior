@@ -744,8 +744,13 @@ app.get('/', (request, response) => {
   - Set key-value: ```set counter 1000```
   - Increment counter by 33: ```incrby counter 33```
   - Decrement counter by 1: ```decr counter```
-- Redis Data Types
+- [Redis Data Types](https://redis.io/topics/data-types-intro)
   - Set multiples key-value: ```mset a 2 b 5```
   - Get multiples key-value: ```mget a b```
+  - Redis Hashes - similar to object
+    - Set hash with key-values:  ```hmset user id 45 name "Jonny"```
+    - Get hash with key: ```hget user id```
+    - Get hash with key: ```hget user name```
+    - Get all keys and values: ```hgetall user```
 
 **[⬆ back to top](#table-of-contents)**
