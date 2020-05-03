@@ -703,5 +703,9 @@ app.get('/', (request, response) => {
   - [postgres](https://hub.docker.com/_/postgres/)
   - [psql](https://www.postgresql.org/docs/9.2/app-psql.html)
   - [Getting Started with PostgreSQL on Mac OSX](https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb)
+  - [How to Create Tables and Insert Data into SQL Databases](http://joshualande.com/create-tables-sql)
+  - [docker network create](https://docs.docker.com/engine/reference/commandline/network_create/)
+  - [Networking in Compose](https://docs.docker.com/compose/networking/)
+  - [docker-compose: difference between network and link](https://stackoverflow.com/questions/41294305/docker-compose-difference-between-network-and-link)
 
 **[⬆ back to top](#table-of-contents)**
