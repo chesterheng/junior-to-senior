@@ -744,5 +744,8 @@ app.get('/', (request, response) => {
   - Set key-value: ```set counter 1000```
   - Increment counter by 33: ```incrby counter 33```
   - Decrement counter by 1: ```decr counter```
+- Redis Data Types
+  - Set multiples key-value: ```mset a 2 b 5```
+  - Get multiples key-value: ```mget a b```
 
 **[⬆ back to top](#table-of-contents)**
