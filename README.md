@@ -735,6 +735,7 @@ app.get('/', (request, response) => {
 - [Redis Quick Start](https://redis.io/topics/quickstart)
 - [Issue with Redis install](https://stackoverflow.com/questions/8131008/issue-with-redis-install)
 - [Redis Installation fails when running make command](https://stackoverflow.com/questions/37103054/redis-installation-fails-when-running-make-command)
+- [Try Redis](http://try.redis.io/)
 - [Redis Commands](https://redis.io/commands)
   - Set key-value: ```set name jane```
   - Get value by key: ```get name```
@@ -752,5 +753,10 @@ app.get('/', (request, response) => {
     - Get hash with key: ```hget user id```
     - Get hash with key: ```hget user name```
     - Get all keys and values: ```hgetall user```
+  - Redis Lists - similar to linked lists
+    - Push 10 to the list from left: ```lpush ourlist 10```
+    - Push Hello to the list from right: ```rpush ourlist "hello"```
+    - Show 2 items in list from left: ```lrange ourlist 0 1```
+    - Pop the list from right: ```rpop ourlist```
 
 **[⬆ back to top](#table-of-contents)**
