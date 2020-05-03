@@ -9,25 +9,23 @@ services:
     command: npm start
     working_dir: /usr/src/smart-brain-api
     environment:
-      POSTGRES_URI: postgres://sally:secret@postgres:5432/smart-brain
-      # POSTGRES_USER: sally
-      # POSTGRES_PASSWORD: secret
-      # POSTGRES_DB: smart-brain
-      # POSTGRES_HOST: postgres
+      POSTGRES_URI: postgres://admin:password@postgres:5432/smart-brain
     links:
-      - postgres    
+      - postgres
     ports:
       - '3000:3000'
-    volumes: 
+    volumes:
       - ./:/usr/src/smart-brain-api
 
-  # Postgres
+  # PostgreSQL
   postgres:
+    container_name: postgres
+    build: ./postgres
     environment: 
-      POSTGRES_USER: sally
-      POSTGRES_PASSWORD: secret
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_URL: postgres://admin:password@localhost:5432/smart-brain
       POSTGRES_DB: smart-brain
       POSTGRES_HOST: postgres
-    image: postgres
     ports:
       - '5432:5432'

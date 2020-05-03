@@ -13,14 +13,8 @@ const image = require('./controllers/image');
 
 const db = knex({
   client: 'pg',
-  cpnnection: process.env.POSTGRES_URI
-  // connection: {
-  //   host : process.env.POSTGRES_HOST,
-  //   user : process.env.POSTGRES_PASSWORD,
-  //   password : process.env.POSTGRES_PASSWORD,
-  //   database : process.env.POSTGRES_DB
-  // }
-  // debug: true
+  connection: process.env.POSTGRES_URI,
+  debug: true
 });
 
 const app = express();
@@ -28,6 +22,12 @@ const app = express();
 app.use(morgan('combined'))
 app.use(cors())
 app.use(bodyParser.json());
+
+// Troubleshooting Knex Connection
+db.select().from('users')
+.then(() => {
+  console.log('connected to postgres');
+});
 
 app.get('/', (req, res)=> { res.send("hello 1234") })
 app.post('/signin', signin.handleSignin(db, bcrypt))
