@@ -732,5 +732,17 @@ app.get('/', (request, response) => {
   - users3.txt
 - [SQL vs. NoSQL Databases: What’s the Difference?](https://www.upwork.com/hiring/data/sql-vs-nosql-databases-whats-the-difference/)
 - [Installing Redis](https://redis.io/download)
+- [Redis Quick Start](https://redis.io/topics/quickstart)
+- [Issue with Redis install](https://stackoverflow.com/questions/8131008/issue-with-redis-install)
+- [Redis Installation fails when running make command](https://stackoverflow.com/questions/37103054/redis-installation-fails-when-running-make-command)
+- [Redis Commands](https://redis.io/commands)
+  - Set key-value: ```set name jane```
+  - Get value by key: ```get name```
+  - Check key exists: ```exists name```
+  - Delete key: ```del name```
+  - Set key to expire in 10s: ```expire name 10```
+  - Set key-value: ```set counter 1000```
+  - Increment counter by 33: ```incrby counter 33```
+  - Decrement counter by 1: ```decr counter```
 
 **[⬆ back to top](#table-of-contents)**
