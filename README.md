@@ -758,5 +758,12 @@ app.get('/', (request, response) => {
     - Push Hello to the list from right: ```rpush ourlist "hello"```
     - Show 2 items in list from left: ```lrange ourlist 0 1```
     - Pop the list from right: ```rpop ourlist```
+  - Redis Sets + sorted sets - data is unique
+    - Set key and score member: ```zadd team 50 "Wizard"```
+    - Set key and score member: ```zadd team 40 "Cavalier"```
+    - Show 2 items in set from left: ```zrange team 0 1```
+    - Set key and score member: ```zadd team 1 "Bolts"```
+    - Show 2 items in set from left: ```zrange team 0 2```
+    - Get item position in: ```zrank team "Wizard"```
 
 **[⬆ back to top](#table-of-contents)**
