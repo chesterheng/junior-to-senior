@@ -731,5 +731,6 @@ app.get('/', (request, response) => {
   - users2.txt
   - users3.txt
 - [SQL vs. NoSQL Databases: What’s the Difference?](https://www.upwork.com/hiring/data/sql-vs-nosql-databases-whats-the-difference/)
+- [Installing Redis](https://redis.io/download)
 
 **[⬆ back to top](#table-of-contents)**
