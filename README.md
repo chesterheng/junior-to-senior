@@ -800,5 +800,10 @@ app.get('/', (request, response) => {
     - client <- JWT token <- server
     - /profile/23 -> token in authorisation header -> server <-> redis
     - client <- package <- server
+- [JWT](https://jwt.io/)
+  - Meaning information in JWT Payload
+  - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
+    - Sign: ```var token = jwt.sign({ foo: 'bar' }, 'shhhhh');```
+    - Verify: ```var decoded = jwt.verify(token, 'shhhhh');```
   
 **[⬆ back to top](#table-of-contents)**
