@@ -809,6 +809,7 @@ app.get('/', (request, response) => {
 - Project Goals
   - Add requireAuth before access backend service
 - Profile Icon
+  - [Tachyons](https://tachyons.io/)
   - [reactstrap](https://reactstrap.github.io/)
 
 **[⬆ back to top](#table-of-contents)**
