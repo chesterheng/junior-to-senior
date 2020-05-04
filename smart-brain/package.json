@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "bootstrap": "^4.4.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-particles-js": "^2.1.0",
     "react-scripts": "1.0.17",
     "react-tilt": "^0.1.4",
+    "reactstrap": "^8.4.1",
     "tachyons": "^4.9.0"
   },
   "scripts": {

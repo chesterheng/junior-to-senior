@@ -808,5 +808,7 @@ app.get('/', (request, response) => {
     - Verify: ```var decoded = jwt.verify(token, 'shhhhh');```
 - Project Goals
   - Add requireAuth before access backend service
+- Profile Icon
+  - [reactstrap](https://reactstrap.github.io/)
 
 **[⬆ back to top](#table-of-contents)**
