@@ -533,6 +533,7 @@ app.get('/', (request, response) => {
 
   - [PostgreSQL](https://www.postgresql.org/download/macosx/)
   - [PostgreSQL GUI tool for macOS](http://www.psequel.com)
+  - [Postgres Prefs](https://github.com/MaccaTech/PostgresPrefs)
   - Code injection Exercise: Start Security-server, then security-client
   - Key in `<img src='/' onerror="alert('boom')">`
 
@@ -805,5 +806,7 @@ app.get('/', (request, response) => {
   - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
     - Sign: ```var token = jwt.sign({ foo: 'bar' }, 'shhhhh');```
     - Verify: ```var decoded = jwt.verify(token, 'shhhhh');```
-  
+- Project Goals
+  - Add requireAuth before access backend service
+
 **[⬆ back to top](#table-of-contents)**
