@@ -672,6 +672,7 @@ app.get('/', (request, response) => {
   - Image: the file that describes what the container should do
   - [docker hub](https://hub.docker.com/): similar to npm
 - [Installing Docker](https://docs.docker.com/docker-for-mac/install/)
+- [The Best Ways to Install Docker for Windows, Mac, and Linux, with Tips](https://www.bretfisher.com/installdocker/)
 - Dockerfile
   - [```bin/bash```](https://unix.stackexchange.com/questions/398543/what-are-the-contents-of-bin-bash-and-what-do-i-do-if-i-accidentally-overwrote)
   - RUN: execute and stack image in docker container
@@ -783,5 +784,21 @@ app.get('/', (request, response) => {
   - Con: Stolen JWT can decode to see info in JWT
 - [Token Authentication vs. Cookies](https://stackoverflow.com/questions/17000835/token-authentication-vs-cookies)
 - [Why JWTs Suck as Session Tokens](https://scotch.io/bar-talk/why-jwts-suck-as-session-tokens)
-
+- What We Are Building
+  - JWT token
+    - /signin -> Username / Password -> server
+    - client <- JWT token <- server
+    - /profile/23 -> token in authorisation header -> server
+    - client <- package <- server
+  - Cookie
+    - /signin -> Username / Password -> server
+    - client <- Cookie <- server
+    - /profile/23 -> cookie -> server <-> redis
+    - client <- package <- server
+  - JWT token Improved
+    - /signin -> Username / Password -> server
+    - client <- JWT token <- server
+    - /profile/23 -> token in authorisation header -> server <-> redis
+    - client <- package <- server
+  
 **[⬆ back to top](#table-of-contents)**
