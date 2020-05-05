@@ -811,5 +811,6 @@ app.get('/', (request, response) => {
 - Profile Icon
   - [Tachyons](https://tachyons.io/)
   - [reactstrap](https://reactstrap.github.io/)
+-[HTML entities](http://www.w3schools.com/charsets/ref_html_entities_4.asp)
 
 **[⬆ back to top](#table-of-contents)**
