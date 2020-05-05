@@ -1,24 +1,36 @@
 import React, { useState } from 'react'
 import './Profile.css'
 
-const Profile = ({ isProfileOpen, toggleModal, user }) => {
-  const { name, entries, joined, age, pet } = user
-  const [state, setstate] = useState({ name, age, pet })
+const Profile = ({ isProfileOpen, toggleModal, loadUser, user }) => {
+  const { id, name, entries, joined, age, pet } = user
+  const [profile, setProfile] = useState({ name, age, pet })
   const onFormChange = ({ target: { name, value } }) => {
     switch(name) {
       case 'user-name':
-        setstate({ ...state, name: value })
+        setProfile({ ...profile, name: value })
         break
       case 'user-age':
-        setstate({ ...state, age: value })
+        setProfile({ ...profile, age: value })
         break
       case 'user-pet':
-        setstate({ ...state, pet: value })
+        setProfile({ ...profile, pet: value })
         break     
       default:
         return
     }
   }
+
+  const onProfileUpdate = data => {
+    fetch(`http://localhost:3000/profile/${id}`, {
+      method: 'put',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ formInput: data })
+    }).then(resp => {
+      toggleModal()
+      loadUser({ ...profile, data })
+    }).catch(console.log)
+  }
+
   return (
     <div className="profile-modal">
       <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center bg-white">
@@ -26,7 +38,7 @@ const Profile = ({ isProfileOpen, toggleModal, user }) => {
           <img
             src="http://tachyons.io/img/logo.jpg"
             className="h3 w3 dib" alt="avatar" />
-          <h1>{state.name}</h1>
+          <h1>{profile.name}</h1>
           <h4>{`Image Submitted: ${entries}`}</h4>
           <p>{`Member since: ${new Date(joined).toLocaleDateString()}`}</p>
           <hr />
@@ -64,7 +76,7 @@ const Profile = ({ isProfileOpen, toggleModal, user }) => {
               justifyContent: 'space-evenly'
             }}
           >
-            <button className='b pa2 grow pointer hover-white w-40 bg-light-blue b--black-20'>Save</button>
+            <button className='b pa2 grow pointer hover-white w-40 bg-light-blue b--black-20' onClick={() => onProfileUpdate(profile)}>Save</button>
             <button className='b pa2 grow pointer hover-white w-40 bg-light-red b--black-20' onClick={toggleModal}>Cancel</button>
           </div>
         </main>
