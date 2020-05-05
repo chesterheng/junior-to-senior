@@ -30,7 +30,7 @@ db.select().from('users')
 });
 
 app.get('/', (req, res)=> { res.send("hello 1234") })
-app.post('/signin', signin.handleSignin(db, bcrypt))
+app.post('/signin', signin.signinAuthentication(db, bcrypt))
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
 app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db)})
 app.put('/profile/:id', (req, res) => { profile.handleProfileUpdate(req, res, db)})
