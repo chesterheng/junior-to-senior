@@ -815,5 +815,7 @@ app.get('/', (request, response) => {
 - Updating Profile
   - [Knex.js](https://knexjs.org/)
   - [Postman](https://www.postman.com/)
+- Sending The JWT Token
+  - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
 
 **[⬆ back to top](#table-of-contents)**
