@@ -849,5 +849,9 @@ app.get('/', (request, response) => {
     - Get User Id from redis with token
       - No User Id or null -> response status 401
     - Pass request to next middleware
+- Updating our App
+  - Update Dockerfile
+  - Update docker-compose.yml
+  - Update package.json
 
 **[⬆ back to top](#table-of-contents)**
