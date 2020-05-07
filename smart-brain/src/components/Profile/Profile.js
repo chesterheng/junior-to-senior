@@ -23,7 +23,10 @@ const Profile = ({ isProfileOpen, toggleModal, loadUser, user }) => {
   const onProfileUpdate = data => {
     fetch(`http://localhost:3000/profile/${id}`, {
       method: 'put',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': window.sessionStorage.getItem('token')
+      },
       body: JSON.stringify({ formInput: data })
     }).then(resp => {
       toggleModal()

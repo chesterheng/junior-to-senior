@@ -99,6 +99,6 @@ const signinAuthentication = (db, bcrypt) => (req, res) => {
 }
 
 module.exports = {
-  handleSignin,
-  signinAuthentication
+  signinAuthentication,
+  redisClient
 }

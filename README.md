@@ -842,5 +842,12 @@ app.get('/', (request, response) => {
 - Bearer Token
   - [Refresh Tokens: When to Use Them and How They Interact with JWTs](https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/)
   - [Why is 'Bearer' required before the token in 'Authorization' header in a HTTP request?](https://security.stackexchange.com/questions/108662/why-is-bearer-required-before-the-token-in-authorization-header-in-a-http-re)
+- Middleware
+  - case that we always need to act up request
+  - Authorization Middleware: check for Authorization header in request
+    - No Authorization header -> response status 401
+    - Get User Id from redis with token
+      - No User Id or null -> response status 401
+    - Pass request to next middleware
 
 **[⬆ back to top](#table-of-contents)**
