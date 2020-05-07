@@ -862,12 +862,13 @@ app.get('/', (request, response) => {
 ## **Section 14: AWS**
 
 Amazon Web Services
+
 - [AWS](https://aws.amazon.com/)
-  - EC2: a basic server
-  - S3: object storage service (e.g. store image file)
-  - Lambda: run code for virtually any type of application or backend service
-  - CloudFront: a web server that speeds up distribution of our static files (CDN)
-  - DynamoDB: fast noSQL database, use key value
+  - EC2: Virtual Servers in the Cloud
+  - S3: Scalable Storage in the Cloud
+  - Lambda: Run Code without Thinking about Servers
+  - CloudFront: Global Content Delivery Network
+  - DynamoDB: Managed NoSQL Database
   - Google Amazon flow
   - Example: Smart Brain App
     - CloudFront: serve static Smart Brain frontend files
@@ -877,19 +878,32 @@ Amazon Web Services
     - Lambda: store clarify response in S3
     - S3: return respose from clarify to EC2
 - Monolithic vs Micro Services
-  - Monolithic: all services must be tested before deploy to production 
+  - Monolithic: all services must be tested before deploy to production
   - Micro Services: small chunks can be tested individually
 - Amazon Lambda
   - function is only run when trigger
   - no cost if the function is not trigger
+  - AWS Management Console
+    - Find services: Lambda
+    - Create function
+    - Enter function name, select Runtime and Permissions
 - Amazon Lambda Dashboard
   - [AWS Free Tier](https://aws.amazon.com/free)
+- IAM - Manage access to AWS resources
+  - Users: Add user with Programmatic access
+  - Set permissions: AdministratorAccess (for development only)
+  - Get Access key ID and Secret access key
+  - [Managing IAM Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage.html)
+  - [IAM](https://www.serverless.com/framework/docs/providers/aws/guide/iam/)
 - [Serverless](https://www.serverless.com/)
   - Create Lambda function with Serverless
-  - Get Help: ```serverless --help```
-  - Get Help on specific command: ```serverless create --help```
-  - Shorthand: ```sls --help```
-  - Create a new Serverless preoject: ```sls create -t aws-nodejs```
+  - Get Help: `serverless --help`
+  - Get Help on specific command: `serverless create --help`
+  - Shorthand: `sls --help`
+  - Create a new Serverless preoject: `sls create -t aws-nodejs`
+  - Connect AWS account to serverless framework with IAM: ```sls config credentials --provider aws --key <Access key ID> --secret <Secret access key>```
+    - Goto cd ~/.aws
+    - check credentials has Access key ID and Secret access key
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -940,6 +954,6 @@ Amazon Web Services
 - Freelancing with a niche and rare skill
 - Look at hot and trendy technology
 - Selective in what you learn - 20/80
-- Start from Why? 
+- Start from Why?
 
 **[⬆ back to top](#table-of-contents)**
