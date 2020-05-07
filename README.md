@@ -876,6 +876,9 @@ Amazon Web Services
     - Lambda: take image url from EC2 and send to clarify
     - Lambda: store clarify response in S3
     - S3: return respose from clarify to EC2
+- Monolithic vs Micro Services
+  - Monolithic: all services must be tested before deploy to production 
+  - Micro Services: small chunks can be tested individually
 
 **[⬆ back to top](#table-of-contents)**
 
