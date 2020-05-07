@@ -884,6 +884,12 @@ Amazon Web Services
   - no cost if the function is not trigger
 - Amazon Lambda Dashboard
   - [AWS Free Tier](https://aws.amazon.com/free)
+- [Serverless](https://www.serverless.com/)
+  - Create Lambda function with Serverless
+  - Get Help: ```serverless --help```
+  - Get Help on specific command: ```serverless create --help```
+  - Shorthand: ```sls --help```
+  - Create a new Serverless preoject: ```sls create -t aws-nodejs```
 
 **[⬆ back to top](#table-of-contents)**
 
