@@ -882,6 +882,8 @@ Amazon Web Services
 - Amazon Lambda
   - function is only run when trigger
   - no cost if the function is not trigger
+- Amazon Lambda Dashboard
+  - [AWS Free Tier](https://aws.amazon.com/free)
 
 **[⬆ back to top](#table-of-contents)**
 
