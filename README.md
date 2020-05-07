@@ -929,12 +929,12 @@ functions:
   - [The Cloudflare Global Anycast Network](https://www.cloudflare.com/network/)
   - [Amazon CloudFront](https://aws.amazon.com/cloudfront/)
   - [Content Delivery Network](https://azure.microsoft.com/en-us/services/cdn/)
-- GZIP
-- Database Scaling
-- Caching
-- Load Balancing
-
-
+- [GZIP Compression](https://www.cdnplanet.com/guides/compression/)
+  - [compression](https://github.com/expressjs/compression)
+  - Check Response Headers: `content-encoding: gzip`
+  - [nginx](https://docs.nginx.com/nginx/admin-guide/web-server/compression/)
+- [Brotli compression format](https://github.com/google/brotli)
+  - Check Response Headers: `content-encoding: br`
 
 **[⬆ back to top](#table-of-contents)**
 
