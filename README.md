@@ -16,6 +16,8 @@
   - [**Section 11: Docker**](#section-11-docker)
   - [**Section 12: Redis**](#section-12-redis)
   - [**Section 13: JWT + Sessions**](#section-13-jwt--sessions)
+  - [**Section 17: Extra Bits**](#section-17-extra-bits)
+  - [**Section 20: Bonus: AMA Video!**](#section-20-bonus-ama-video)
 
 ## **Section 2: SSH**
 
@@ -675,29 +677,29 @@ app.get('/', (request, response) => {
 - [Installing Docker](https://docs.docker.com/docker-for-mac/install/)
 - [The Best Ways to Install Docker for Windows, Mac, and Linux, with Tips](https://www.bretfisher.com/installdocker/)
 - Dockerfile
-  - [```bin/bash```](https://unix.stackexchange.com/questions/398543/what-are-the-contents-of-bin-bash-and-what-do-i-do-if-i-accidentally-overwrote)
+  - [`bin/bash`](https://unix.stackexchange.com/questions/398543/what-are-the-contents-of-bin-bash-and-what-do-i-do-if-i-accidentally-overwrote)
   - RUN: execute and stack image in docker container
   - CMD: exexute when enter docker container, only one CMD
   - Outside host cannot access to container by default
   - Port binding
 - [Docker Commands](https://docs.docker.com/engine/reference/builder/#usage)
-  - Build Server Image: ```docker build -t smartbrainservercontainer .```
-  - Build Client Image: ```docker build -t smartbrainclientcontainer .```
-  - Run and Enter container: ```docker run -it smartbrainservercontainer```
-  - Run container in the background: ```docker run -it -d smartbrainservercontainer```
-  - List all container: ```docker ps```
-  - Enter a container running in background: ```docker exec -it 7464fd583963 bash```
-  - Stop running container: ```docker stop 7464fd583963```
-  - Port forwarding: ```docker run -it -p 3000:3000 smartbrainservercontainer```
+  - Build Server Image: `docker build -t smartbrainservercontainer .`
+  - Build Client Image: `docker build -t smartbrainclientcontainer .`
+  - Run and Enter container: `docker run -it smartbrainservercontainer`
+  - Run container in the background: `docker run -it -d smartbrainservercontainer`
+  - List all container: `docker ps`
+  - Enter a container running in background: `docker exec -it 7464fd583963 bash`
+  - Stop running container: `docker stop 7464fd583963`
+  - Port forwarding: `docker run -it -p 3000:3000 smartbrainservercontainer`
 - Docker Compose
-  - is a tool for defining and running multi-container Docker applications. 
+  - is a tool for defining and running multi-container Docker applications.
   - edit docker-compose.yml
-  - Shutdown: ```docker-compose down```
-  - Build container and run all services: ```docker-compose up --build```
-  - Build container: ```docker-compose build```
-  - Run all services in background: ```docker-compose up -d```
-  - Run a specific service: ```docker-compose run --service-ports smart-brain-api```
-  - Run a specific service and enter bash: ```docker-compose exec smart-brain-api bash```
+  - Shutdown: `docker-compose down`
+  - Build container and run all services: `docker-compose up --build`
+  - Build container: `docker-compose build`
+  - Run all services in background: `docker-compose up -d`
+  - Run a specific service: `docker-compose run --service-ports smart-brain-api`
+  - Run a specific service and enter bash: `docker-compose exec smart-brain-api bash`
   - [docker-compose build](https://docs.docker.com/compose/reference/build/)
   - [docker-compose run](https://docs.docker.com/compose/reference/run/)
   - [docker-compose up](https://docs.docker.com/compose/reference/up/)
@@ -740,34 +742,34 @@ app.get('/', (request, response) => {
 - [Redis Installation fails when running make command](https://stackoverflow.com/questions/37103054/redis-installation-fails-when-running-make-command)
 - [Try Redis](http://try.redis.io/)
 - [Redis Commands](https://redis.io/commands)
-  - Set key-value: ```set name jane```
-  - Get value by key: ```get name```
-  - Check key exists: ```exists name```
-  - Delete key: ```del name```
-  - Set key to expire in 10s: ```expire name 10```
-  - Set key-value: ```set counter 1000```
-  - Increment counter by 33: ```incrby counter 33```
-  - Decrement counter by 1: ```decr counter```
+  - Set key-value: `set name jane`
+  - Get value by key: `get name`
+  - Check key exists: `exists name`
+  - Delete key: `del name`
+  - Set key to expire in 10s: `expire name 10`
+  - Set key-value: `set counter 1000`
+  - Increment counter by 33: `incrby counter 33`
+  - Decrement counter by 1: `decr counter`
 - [Redis Data Types](https://redis.io/topics/data-types-intro)
-  - Set multiples key-value: ```mset a 2 b 5```
-  - Get multiples key-value: ```mget a b```
+  - Set multiples key-value: `mset a 2 b 5`
+  - Get multiples key-value: `mget a b`
   - Redis Hashes - similar to object
-    - Set hash with key-values:  ```hmset user id 45 name "Jonny"```
-    - Get hash with key: ```hget user id```
-    - Get hash with key: ```hget user name```
-    - Get all keys and values: ```hgetall user```
+    - Set hash with key-values: `hmset user id 45 name "Jonny"`
+    - Get hash with key: `hget user id`
+    - Get hash with key: `hget user name`
+    - Get all keys and values: `hgetall user`
   - Redis Lists - similar to linked lists
-    - Push 10 to the list from left: ```lpush ourlist 10```
-    - Push Hello to the list from right: ```rpush ourlist "hello"```
-    - Show 2 items in list from left: ```lrange ourlist 0 1```
-    - Pop the list from right: ```rpop ourlist```
+    - Push 10 to the list from left: `lpush ourlist 10`
+    - Push Hello to the list from right: `rpush ourlist "hello"`
+    - Show 2 items in list from left: `lrange ourlist 0 1`
+    - Pop the list from right: `rpop ourlist`
   - Redis Sets + sorted sets - data is unique
-    - Set key and score member: ```zadd team 50 "Wizard"```
-    - Set key and score member: ```zadd team 40 "Cavalier"```
-    - Show 2 items in set from left: ```zrange team 0 1```
-    - Set key and score member: ```zadd team 1 "Bolts"```
-    - Show 2 items in set from left: ```zrange team 0 2```
-    - Get item position in: ```zrank team "Wizard"```
+    - Set key and score member: `zadd team 50 "Wizard"`
+    - Set key and score member: `zadd team 40 "Cavalier"`
+    - Show 2 items in set from left: `zrange team 0 1`
+    - Set key and score member: `zadd team 1 "Bolts"`
+    - Show 2 items in set from left: `zrange team 0 2`
+    - Get item position in: `zrank team "Wizard"`
 
 **[⬆ back to top](#table-of-contents)**
 
@@ -804,8 +806,8 @@ app.get('/', (request, response) => {
 - [JWT](https://jwt.io/)
   - Meaning information in JWT Payload
   - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
-    - Sign: ```var token = jwt.sign({ foo: 'bar' }, 'shhhhh');```
-    - Verify: ```var decoded = jwt.verify(token, 'shhhhh');```
+    - Sign: `var token = jwt.sign({ foo: 'bar' }, 'shhhhh');`
+    - Verify: `var decoded = jwt.verify(token, 'shhhhh');`
 - Project Goals
   - Add requireAuth before access backend service
 - Profile Icon
@@ -820,23 +822,23 @@ app.get('/', (request, response) => {
 - Adding Redis
   - [Node Redis](https://github.com/NodeRedis/node-redis)
   - [Best JavaScript code snippets using redis.RedisClient](https://www.codota.com/code/javascript/classes/redis/RedisClient)
-  - Shutdown docker container: ```docker-compose down```
-  - Build and Start docker container: ```docker-compose up --build```
-  - Start docker container: ```docker-compose up```
-  - Connect redis client to redis server in docker container: ```docker-compose exec redis redis-cli```
-  - set token id: ```set ayJhbGciOiJIUzI1NiIseyJlbWFpbCI6InRpbUBnbWFpbC5jb20iLCJpYXQimV4cCI6MTU4ODk5MTU2N30.INBo55fz0JZRds0aXqs3LeGD4I 3```
-  - get token: ```get ayJhbGciOiJIUzI1NiIseyJlbWFpbCI6InRpbUBnbWFpbC5jb20iLCJpYXQimV4cCI6MTU4ODk5MTU2N30.INBo55fz0JZRds0aXqs3LeGD4I```
+  - Shutdown docker container: `docker-compose down`
+  - Build and Start docker container: `docker-compose up --build`
+  - Start docker container: `docker-compose up`
+  - Connect redis client to redis server in docker container: `docker-compose exec redis redis-cli`
+  - set token id: `set ayJhbGciOiJIUzI1NiIseyJlbWFpbCI6InRpbUBnbWFpbC5jb20iLCJpYXQimV4cCI6MTU4ODk5MTU2N30.INBo55fz0JZRds0aXqs3LeGD4I 3`
+  - get token: `get ayJhbGciOiJIUzI1NiIseyJlbWFpbCI6InRpbUBnbWFpbC5jb20iLCJpYXQimV4cCI6MTU4ODk5MTU2N30.INBo55fz0JZRds0aXqs3LeGD4I`
 - User authentication process with email and password (first time)
-  - User Signin: Client [{ email, password }] => Backend API 
+  - User Signin: Client [{ email, password }] => Backend API
   - Backend Sign Token: Client - Backend API [token = jwt.sign({ email }, JWT_SECRET)]
-  - Redis Store Token: Client - Backend API [redisClient.set(token, id)] => Redis 
+  - Redis Store Token: Client - Backend API [redisClient.set(token, id)] => Redis
   - Client Receive token: Client [{ success, userId, token }] <= Backend API - Redis
   - Client save Auth Token In Session: Client [window.sessionStorage.setItem('token', token)] - Server - Redis
     - sessionStorage: session for single browser tab
     - localStorage: session for multiple browser tabs
 - User authentication process with token (refresh browser)
-  - User refresh browser: Client [req = { headers: { 'Authorization': token } } ] => Backend API 
-  - Backend Get Id from Auth Token : Client - Backend API [redisClient.get(token)] => Redis 
+  - User refresh browser: Client [req = { headers: { 'Authorization': token } } ] => Backend API
+  - Backend Get Id from Auth Token : Client - Backend API [redisClient.get(token)] => Redis
   - Redis pass id to Backend: Client - Backend API <= Redis [id]
   - Client Receive id: Client [id] <= Backend API - Redis
 - Bearer Token
@@ -853,5 +855,56 @@ app.get('/', (request, response) => {
   - Update Dockerfile
   - Update docker-compose.yml
   - Update package.json
+
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 17: Extra Bits**
+
+- Section Overview
+- Complexity vs Simplicity
+  - Choose Simplicity over Complexity
+  - Create code of good quality
+  - Good code is self documented
+  - Good code minimise bug
+  - Minimise complexity as much as you can
+  - What can I do to make this code easy to understand?
+- NPM Is Not Your Friend
+  - Most react library is written as class component
+  - Take the library src and refactor to functional component if possible
+  - Check library size
+- Learn To Learn
+- Start With Why
+  - Tools come and go
+  - Fundamental: computer science topics
+  - Fundamental: software development practices
+  - Why this solution was created?
+  - What problem is it solving?
+  - Why is this the answer to my problem?
+  - Understand the why of each library and what problems they solve?
+  - Understand the big picture
+  - Be the observer not the hamster
+  - See the entire ecosystem and make smart decision
+- Endorsements On LinkedIN
+
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 20: Bonus: AMA Video!**
+
+- Machine Learning and Business Analysis
+- Business Data, Data Analysis
+- Developer lifecycle
+  - Learning to code, who to ask, what course to take
+  - Imposter Syndrome, don't know enough
+  - Lead project, do not get to god complex
+    - understand pro and con based on the situation
+    - open to suggestions
+- Use code to automate a repeating task in mylife
+- Pick a tech stack to finish and deliver fast
+- Gain valuable experience to work with tech team in company
+- Freelancing with an established client based
+- Freelancing with a niche and rare skill
+- Look at hot and trendy technology
+- Selective in what you learn - 20/80
+- Start from Why? 
 
 **[⬆ back to top](#table-of-contents)**
