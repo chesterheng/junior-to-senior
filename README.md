@@ -935,6 +935,30 @@ functions:
   - [nginx](https://docs.nginx.com/nginx/admin-guide/web-server/compression/)
 - [Brotli compression format](https://github.com/google/brotli)
   - Check Response Headers: `content-encoding: br`
+- Database Scaling
+  - Identify Inefficient Queries 
+    - Do not have too many joints
+    - Ask for required information only
+    - Use indexes - `CREATE INDEX idx_name ON table_name (column_name);` 
+    - Storage is the slowest piece in a relational database
+    - Inefficient Query can cause a huge amount of delay
+  - Increase Memory
+    - Store more information in memory
+  - Vertical Scaling (Redis, Memchached)
+    - Add another service so that your system effectively uses the resources better
+    - Add another server that is a memory storage which makes things fast means that we've just increased the memory of our database
+    - Check Redis first before asking the database
+    - Database response will cache in Redis
+    - Use memory access instead of disk access
+  - Sharding
+    - break down the data into different places
+      - one database store age > 30
+      - another database store age <=30
+  - More Databases
+    - Distribute request load to different database
+    - Place a load balancer in front of all databases to distribute the load
+  - [Database Type](https://stackoverflow.com/questions/33760290/how-many-types-of-database-are-there)
+    - decide what type of characteristics or behaviors do we want to out of the database
 
 **[⬆ back to top](#table-of-contents)**
 
