@@ -4,9 +4,9 @@ const redis = require("redis");
 // setup redis
 const redisClient = redis
   .createClient({
-  // refer to redis service in docker container
-  host: 'redis' 
-}).on("error", error => console.error(error));
+    // refer to redis service in docker container
+    host: 'redis'
+  }).on("error", error => console.error(error));
 
 const handleSignin = (db, bcrypt, req, res) => {
   const {
@@ -33,20 +33,26 @@ const handleSignin = (db, bcrypt, req, res) => {
 }
 
 const getAuthTokenId = (req, res) => {
-  const { authorization } = req.body
+  const {
+    authorization
+  } = req.headers
   // Redis client: get token
   // get a id or nil
   return redisClient.get(authorization, (err, reply) => {
-      if(err || !reply) {
-        return res.status(400).json('Unauthorized')
-      }
-      return res.json({ id: reply })
+    if (err || !reply) {
+      return res.status(400).json('Unauthorized')
+    }
+    return res.json({
+      id: reply
+    })
   })
 }
 
 const signToken = email => {
-  const jwtPayload = { email }
-  return jwt.sign( 
+  const jwtPayload = {
+    email
+  }
+  return jwt.sign(
     jwtPayload,
     process.env.JWT_SECRET, {
       expiresIn: '2 days'
@@ -62,16 +68,25 @@ const setToken = (key, value) => {
 
 const createSessions = user => {
   // JWT token, return user data
-  const { email, id } = user;
+  const {
+    email,
+    id
+  } = user;
   const token = signToken(email)
   // store token to redis database
   return setToken(token, id)
-  .then(() => ({ success: 'true', userId: id, token }))
-  .catch(error => console.log(error))
+    .then(() => ({
+      success: 'true',
+      userId: id,
+      token
+    }))
+    .catch(error => console.log(error))
 }
 
 const signinAuthentication = (db, bcrypt) => (req, res) => {
-  const { authorization } = req.headers;
+  const {
+    authorization
+  } = req.headers;
   return authorization ? getAuthTokenId(req, res) :
     handleSignin(db, bcrypt, req, res)
     .then(data => {

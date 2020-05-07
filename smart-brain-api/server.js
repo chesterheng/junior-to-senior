@@ -14,12 +14,12 @@ const image = require('./controllers/image');
 const db = knex({
   client: 'pg',
   connection: process.env.POSTGRES_URI,
-  debug: true
+  // debug: true
 });
 
 const app = express();
 
-app.use(morgan('combined'))
+// app.use(morgan('combined'))
 app.use(cors())
 app.use(bodyParser.json());
 

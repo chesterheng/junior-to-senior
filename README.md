@@ -826,15 +826,18 @@ app.get('/', (request, response) => {
   - Connect redis client to redis server in docker container: ```docker-compose exec redis redis-cli```
   - set token id: ```set ayJhbGciOiJIUzI1NiIseyJlbWFpbCI6InRpbUBnbWFpbC5jb20iLCJpYXQimV4cCI6MTU4ODk5MTU2N30.INBo55fz0JZRds0aXqs3LeGD4I 3```
   - get token: ```get ayJhbGciOiJIUzI1NiIseyJlbWFpbCI6InRpbUBnbWFpbC5jb20iLCJpYXQimV4cCI6MTU4ODk5MTU2N30.INBo55fz0JZRds0aXqs3LeGD4I```
-  - User authentication process with email and password (first time)
-    - Client Signin: Client [{ email, password }] => Backend API 
-    - Backend Sign Token: Client - Backend API [token = jwt.sign({ email }, JWT_SECRET)]
-    - Redis Store Token: Client - Backend API [redisClient.set(token, id)] => Redis 
-    - Client Receive token: Client [{ success, userId, token }] <= Backend API - Redis
-  - User authentication process with token
-    - Client Signin: Client [req = { authorization header: token }] => Backend API 
-    - Backend Get Id from Auth Token : Client - Backend API [redisClient.get(token)] => Redis 
-    - Redis pass id to Backend: Client - Backend API <= Redis [id]
-    - Client Receive id: Client [id] <= Backend API - Redis
+- User authentication process with email and password (first time)
+  - User Signin: Client [{ email, password }] => Backend API 
+  - Backend Sign Token: Client - Backend API [token = jwt.sign({ email }, JWT_SECRET)]
+  - Redis Store Token: Client - Backend API [redisClient.set(token, id)] => Redis 
+  - Client Receive token: Client [{ success, userId, token }] <= Backend API - Redis
+  - Client save Auth Token In Session: Client [window.sessionStorage.setItem('token', token)] - Server - Redis
+    - sessionStorage: session for single browser tab
+    - localStorage: session for multiple browser tabs
+- User authentication process with token (refresh browser)
+  - User refresh browser: Client [req = { headers: { 'Authorization': token } } ] => Backend API 
+  - Backend Get Id from Auth Token : Client - Backend API [redisClient.get(token)] => Redis 
+  - Redis pass id to Backend: Client - Backend API <= Redis [id]
+  - Client Receive id: Client [id] <= Backend API - Redis
 
 **[⬆ back to top](#table-of-contents)**
