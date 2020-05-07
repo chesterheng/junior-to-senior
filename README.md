@@ -826,10 +826,15 @@ app.get('/', (request, response) => {
   - Connect redis client to redis server in docker container: ```docker-compose exec redis redis-cli```
   - set token id: ```set ayJhbGciOiJIUzI1NiIseyJlbWFpbCI6InRpbUBnbWFpbC5jb20iLCJpYXQimV4cCI6MTU4ODk5MTU2N30.INBo55fz0JZRds0aXqs3LeGD4I 3```
   - get token: ```get ayJhbGciOiJIUzI1NiIseyJlbWFpbCI6InRpbUBnbWFpbC5jb20iLCJpYXQimV4cCI6MTU4ODk5MTU2N30.INBo55fz0JZRds0aXqs3LeGD4I```
-  - Why is it better to save the token in redis instead of using userId as jwtPayload and decoding the token in each request? Refer to authentication process below:
+  - User authentication process with email and password (first time)
     - Client Signin: Client [{ email, password }] => Backend API 
-    - Server Sign Token: Client - Backend API [token = jwt.sign({ email }, JWT_SECRET)]
-    - Redis Store Token: Client - Backend API => Redis [redisClient.set(token, id)]
+    - Backend Sign Token: Client - Backend API [token = jwt.sign({ email }, JWT_SECRET)]
+    - Redis Store Token: Client - Backend API [redisClient.set(token, id)] => Redis 
     - Client Receive token: Client [{ success, userId, token }] <= Backend API - Redis
+  - User authentication process with token
+    - Client Signin: Client [req = { authorization header: token }] => Backend API 
+    - Backend Get Id from Auth Token : Client - Backend API [redisClient.get(token)] => Redis 
+    - Redis pass id to Backend: Client - Backend API <= Redis [id]
+    - Client Receive id: Client [id] <= Backend API - Redis
 
 **[⬆ back to top](#table-of-contents)**
