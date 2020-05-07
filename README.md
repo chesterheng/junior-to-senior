@@ -17,6 +17,7 @@
   - [**Section 12: Redis**](#section-12-redis)
   - [**Section 13: JWT + Sessions**](#section-13-jwt--sessions)
   - [**Section 14: AWS**](#section-14-aws)
+  - [**Section 15: Performance Part 3**](#section-15-performance-part-3)
   - [**Section 17: Extra Bits**](#section-17-extra-bits)
   - [**Section 20: Bonus: AMA Video!**](#section-20-bonus-ama-video)
 
@@ -917,6 +918,23 @@ functions:
           path: rank
           method: get
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 15: Performance Part 3**
+
+- CDNs
+  - [What is a CDN?](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)
+  - [What is a CDN edge server?](https://www.cloudflare.com/learning/cdn/glossary/edge-server/)
+  - [The Cloudflare Global Anycast Network](https://www.cloudflare.com/network/)
+  - [Amazon CloudFront](https://aws.amazon.com/cloudfront/)
+  - [Content Delivery Network](https://azure.microsoft.com/en-us/services/cdn/)
+- GZIP
+- Database Scaling
+- Caching
+- Load Balancing
+
+
 
 **[⬆ back to top](#table-of-contents)**
 
