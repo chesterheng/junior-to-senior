@@ -817,5 +817,11 @@ app.get('/', (request, response) => {
   - [Postman](https://www.postman.com/)
 - Sending The JWT Token
   - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
+- Adding Redis
+  - [Node Redis](https://github.com/NodeRedis/node-redis)
+  - Shutdown docker container: ```docker-compose down```
+  - Build and Start docker container: ```docker-compose up --build```
+  - Start docker container: ```docker-compose up```
+  - Connect redis client to redis server in docker container: ```docker-compose exec redis redis-cli```
 
 **[⬆ back to top](#table-of-contents)**

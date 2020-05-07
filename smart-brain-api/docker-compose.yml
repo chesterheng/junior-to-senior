@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
 
-  # Backend API
+  # Start Backend API
   smart-brain-api:
     container_name: backend
     build: ./
@@ -12,12 +12,13 @@ services:
       POSTGRES_URI: postgres://admin:password@postgres:5432/smart-brain
     links:
       - postgres
+      - redis
     ports:
       - '3000:3000'
     volumes:
       - ./:/usr/src/smart-brain-api
 
-  # PostgreSQL
+  # Start PostgreSQL Server
   postgres:
     container_name: postgres
     build: ./postgres
@@ -29,3 +30,9 @@ services:
       POSTGRES_HOST: postgres
     ports:
       - '5432:5432'
+
+  # Start Redis Server
+  redis:
+    image: redis
+    ports:
+      - '6379:6379'
