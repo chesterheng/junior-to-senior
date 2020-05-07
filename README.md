@@ -819,9 +819,17 @@ app.get('/', (request, response) => {
   - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
 - Adding Redis
   - [Node Redis](https://github.com/NodeRedis/node-redis)
+  - [Best JavaScript code snippets using redis.RedisClient](https://www.codota.com/code/javascript/classes/redis/RedisClient)
   - Shutdown docker container: ```docker-compose down```
   - Build and Start docker container: ```docker-compose up --build```
   - Start docker container: ```docker-compose up```
   - Connect redis client to redis server in docker container: ```docker-compose exec redis redis-cli```
+  - set token id: ```set ayJhbGciOiJIUzI1NiIseyJlbWFpbCI6InRpbUBnbWFpbC5jb20iLCJpYXQimV4cCI6MTU4ODk5MTU2N30.INBo55fz0JZRds0aXqs3LeGD4I 3```
+  - get token: ```get ayJhbGciOiJIUzI1NiIseyJlbWFpbCI6InRpbUBnbWFpbC5jb20iLCJpYXQimV4cCI6MTU4ODk5MTU2N30.INBo55fz0JZRds0aXqs3LeGD4I```
+  - Why is it better to save the token in redis instead of using userId as jwtPayload and decoding the token in each request? Refer to authentication process below:
+    - Client Signin: Client [{ email, password }] => Backend API 
+    - Server Sign Token: Client - Backend API [token = jwt.sign({ email }, JWT_SECRET)]
+    - Redis Store Token: Client - Backend API => Redis [redisClient.set(token, id)]
+    - Client Receive token: Client [{ success, userId, token }] <= Backend API - Redis
 
 **[⬆ back to top](#table-of-contents)**

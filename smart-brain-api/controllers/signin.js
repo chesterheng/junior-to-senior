@@ -2,15 +2,11 @@ const jwt = require('jsonwebtoken');
 const redis = require("redis");
 
 // setup redis
-const redisClient = redis.createClient({
+const redisClient = redis
+  .createClient({
   // refer to redis service in docker container
   host: 'redis' 
-});
-redisClient.on("error", function (error) {
-  console.error(error);
-});
-redisClient.set("key", "value", redis.print);
-redisClient.get("key", redis.print);
+}).on("error", error => console.error(error));
 
 const handleSignin = (db, bcrypt, req, res) => {
   const {
@@ -52,18 +48,19 @@ const signToken = email => {
   );
 }
 
+// key: token, value: id
+const setToken = (key, value) => {
+  return Promise.resolve(redisClient.set(key, value))
+}
+
 const createSessions = user => {
   // JWT token, return user data
-  const {
-    email,
-    id
-  } = user;
+  const { email, id } = user;
   const token = signToken(email)
-  return {
-    success: 'true',
-    userId: id,
-    token
-  }
+  // store token to redis database
+  return setToken(token, id)
+  .then(() => ({ success: 'true', userId: id, token }))
+  .catch(error => console.log(error))
 }
 
 const signinAuthentication = (db, bcrypt) => (req, res) => {
