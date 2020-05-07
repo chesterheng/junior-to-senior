@@ -16,6 +16,7 @@
   - [**Section 11: Docker**](#section-11-docker)
   - [**Section 12: Redis**](#section-12-redis)
   - [**Section 13: JWT + Sessions**](#section-13-jwt--sessions)
+  - [**Section 14: AWS**](#section-14-aws)
   - [**Section 17: Extra Bits**](#section-17-extra-bits)
   - [**Section 20: Bonus: AMA Video!**](#section-20-bonus-ama-video)
 
@@ -855,6 +856,26 @@ app.get('/', (request, response) => {
   - Update Dockerfile
   - Update docker-compose.yml
   - Update package.json
+
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 14: AWS**
+
+Amazon Web Services
+- [AWS](https://aws.amazon.com/)
+  - EC2: a basic server
+  - S3: object storage service (e.g. store image file)
+  - Lambda: run code for virtually any type of application or backend service
+  - CloudFront: a web server that speeds up distribution of our static files (CDN)
+  - DynamoDB: fast noSQL database, use key value
+  - Google Amazon flow
+  - Example: Smart Brain App
+    - CloudFront: serve static Smart Brain frontend files
+    - EC2: Smart Brain backend rest API
+    - DynamoDB: store user info, user profile
+    - Lambda: take image url from EC2 and send to clarify
+    - Lambda: store clarify response in S3
+    - S3: return respose from clarify to EC2
 
 **[⬆ back to top](#table-of-contents)**
 
