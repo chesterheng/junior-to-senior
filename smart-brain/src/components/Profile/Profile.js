@@ -29,8 +29,11 @@ const Profile = ({ isProfileOpen, toggleModal, loadUser, user }) => {
       },
       body: JSON.stringify({ formInput: data })
     }).then(resp => {
-      toggleModal()
-      loadUser({ ...profile, data })
+      // status 304 means response was cached browser
+      if(resp.status === 200 || resp.status === 304) {
+        toggleModal()
+        loadUser({ ...profile, data })
+      }
     }).catch(console.log)
   }
 
