@@ -880,7 +880,7 @@ Amazon Web Services
 - Monolithic vs Micro Services
   - Monolithic: all services must be tested before deploy to production
   - Micro Services: small chunks can be tested individually
-- Amazon Lambda
+- Amazon Lambda - stateless
   - function is only run when trigger
   - no cost if the function is not trigger
   - AWS Management Console
@@ -901,9 +901,22 @@ Amazon Web Services
   - Get Help on specific command: `serverless create --help`
   - Shorthand: `sls --help`
   - Create a new Serverless preoject: `sls create -t aws-nodejs`
-  - Connect AWS account to serverless framework with IAM: ```sls config credentials --provider aws --key <Access key ID> --secret <Secret access key>```
+  - Connect AWS account to serverless framework with IAM: `sls config credentials --provider aws --key <Access key ID> --secret <Secret access key>`
     - Goto cd ~/.aws
     - check credentials has Access key ID and Secret access key
+  - Deploy to Lambda: `sls deploy`
+  - Invoke Lambda function: `sls invoke --function rank`
+  - Invoke Lambda function locally: `sls invoke local --function rank`
+  - Specifies that the rank function should be run when someone accesses the API gateway at rank via a GET request.
+```
+functions:
+  rank:
+    handler: handler.rank
+    events:
+      - http:
+          path: rank
+          method: get
+```
 
 **[⬆ back to top](#table-of-contents)**
 
