@@ -879,6 +879,9 @@ Amazon Web Services
 - Monolithic vs Micro Services
   - Monolithic: all services must be tested before deploy to production 
   - Micro Services: small chunks can be tested individually
+- Amazon Lambda
+  - function is only run when trigger
+  - no cost if the function is not trigger
 
 **[⬆ back to top](#table-of-contents)**
 
