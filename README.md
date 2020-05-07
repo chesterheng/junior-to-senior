@@ -839,5 +839,8 @@ app.get('/', (request, response) => {
   - Backend Get Id from Auth Token : Client - Backend API [redisClient.get(token)] => Redis 
   - Redis pass id to Backend: Client - Backend API <= Redis [id]
   - Client Receive id: Client [id] <= Backend API - Redis
+- Bearer Token
+  - [Refresh Tokens: When to Use Them and How They Interact with JWTs](https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/)
+  - [Why is 'Bearer' required before the token in 'Authorization' header in a HTTP request?](https://security.stackexchange.com/questions/108662/why-is-bearer-required-before-the-token-in-authorization-header-in-a-http-re)
 
 **[⬆ back to top](#table-of-contents)**
