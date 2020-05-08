@@ -971,9 +971,20 @@ functions:
     - memory cache
     - disk cache
     - How to update cache? 
-      - Cache will update if see different file name
+      - Cache will update if see different ETag
       - [cache busting](What Is Cache Busting?)
     - [HTTP Cache](https://web.dev/http-cache/)
+    - Response header
+      - Content-Length: 1024
+      - Cache-Control: public, max-age=7200
+      - ETag: W/"ca-171f45c4838"
+    - `http://localhost:3000/static/`
+      - First time load: Status - 200, Size - 531 Bytes
+      - Next time load: Status - [304](https://www.keycdn.com/support/304-not-modified), Size - 276 Bytes
+      - First time load in a new tab: Status - 200, Size - (disk cache)
+  - [Caching Everywhere](https://www.freecodecamp.org/news/the-hidden-components-of-web-caching-970854fe2c49/)
+  - [Cache Headers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
+  - [Caching and Performance](https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers)
 - Load Balancing
 
 **[⬆ back to top](#table-of-contents)**
