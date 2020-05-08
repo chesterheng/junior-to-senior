@@ -970,7 +970,7 @@ functions:
     - Check Network tab - Size: (from ServiceWorker)
     - memory cache
     - disk cache
-    - How to update cache? 
+    - How to update cache?
       - Cache will update if see different ETag
       - [cache busting](What Is Cache Busting?)
     - [HTTP Cache](https://web.dev/http-cache/)
@@ -986,6 +986,20 @@ functions:
   - [Cache Headers](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
   - [Caching and Performance](https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers)
 - Load Balancing
+  - Case 1: Little user
+    - Client <-> Server [Serve HTML, CS, JS]
+    - Client <-> Server [Apache, Nginx]
+  - Case 2: More users
+    - Use Nginx as a [reverse proxy server](https://www.nginx.com/resources/glossary/reverse-proxy-server/)
+    - Client [SPA] -> Nginx [Load Balancer] -> Server 1 [NodeJs]
+    - Client [SPA] -> Nginx [Load Balancer] -> Server 2 [NodeJs]
+    - Client [SPA] -> Nginx [Load Balancer] -> Server 3 [NodeJs]
+  - Case 3: More users
+    - Client [SPA] -> CDN [Serve HTML, CS, JS]
+    - Client [SPA] -> Nginx [API Request]
+    - Client [SPA] -> Nginx [Load Balancer] -> Server 1 [NodeJs]
+    - Client [SPA] -> Nginx [Load Balancer] -> Server 2 [NodeJs]
+    - Client [SPA] -> Nginx [Load Balancer] -> Server 3 [NodeJs]
 
 **[⬆ back to top](#table-of-contents)**
 
