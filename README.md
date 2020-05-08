@@ -909,6 +909,7 @@ Amazon Web Services
   - Invoke Lambda function: `sls invoke --function rank`
   - Invoke Lambda function locally: `sls invoke local --function rank`
   - Specifies that the rank function should be run when someone accesses the API gateway at rank via a GET request.
+
 ```
 functions:
   rank:
@@ -936,10 +937,10 @@ functions:
 - [Brotli compression format](https://github.com/google/brotli)
   - Check Response Headers: `content-encoding: br`
 - Database Scaling
-  - Identify Inefficient Queries 
+  - Identify Inefficient Queries
     - Do not have too many joints
     - Ask for required information only
-    - Use indexes - `CREATE INDEX idx_name ON table_name (column_name);` 
+    - Use indexes - `CREATE INDEX idx_name ON table_name (column_name);`
     - Storage is the slowest piece in a relational database
     - Inefficient Query can cause a huge amount of delay
   - Increase Memory
@@ -959,6 +960,21 @@ functions:
     - Place a load balancer in front of all databases to distribute the load
   - [Database Type](https://stackoverflow.com/questions/33760290/how-many-types-of-database-are-there)
     - decide what type of characteristics or behaviors do we want to out of the database
+- Caching
+  - CPU - register (cache) <=> RAM - memory <=> HDD
+  - Cache HTML, CSS and JS files in CDN
+  - Cache API response in Database, Redis or variable
+  - Cache in the browser
+    - Convert web app into PWA app
+    - Cache HTML, CSS and JS files in Application tab - Cache
+    - Check Network tab - Size: (from ServiceWorker)
+    - memory cache
+    - disk cache
+    - How to update cache? 
+      - Cache will update if see different file name
+      - [cache busting](What Is Cache Busting?)
+    - [HTTP Cache](https://web.dev/http-cache/)
+- Load Balancing
 
 **[⬆ back to top](#table-of-contents)**
 
