@@ -1,0 +1,16 @@
+{
+  "name": "loadbalance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bottleneck": "^2.3.0",
+    "sleep": "^5.1.1"
+  }
+}

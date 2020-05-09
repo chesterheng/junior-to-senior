@@ -1,0 +1,25 @@
+version: '3'
+services:
+  web1:
+    build: .
+    ports:
+      - 3000
+  web2:
+    build: .
+    ports:
+      - 3000
+  web3:
+    build: .
+    ports:
+      - 3000
+  load-balancer:
+    build: nginx/
+    ports:
+      - 80:80
+    links:
+      - web1
+      - web2
+      - web3
+    volumes:
+      # allows you to run docker commands inside container - https://medium.com/lucjuggery/about-var-run-docker-sock-3bfd276e12fd
+      - /var/run/docker.sock:/var/run/docker.sock

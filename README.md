@@ -1000,6 +1000,16 @@ functions:
     - Client [SPA] -> Nginx [Load Balancer] -> Server 1 [NodeJs]
     - Client [SPA] -> Nginx [Load Balancer] -> Server 2 [NodeJs]
     - Client [SPA] -> Nginx [Load Balancer] -> Server 3 [NodeJs]
+  - [An Introduction to HAProxy and Load Balancing Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
+  - [Load balancing](https://www.digitalocean.com/products/load-balancer/)
+  - [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/)
+  - [Docker Tips : about /var/run/docker.sock](https://medium.com/better-programming/about-var-run-docker-sock-3bfd276e12fd)
+  - Nginx
+    - [nginx documentation](https://nginx.org/en/docs/)
+    - [How to Configure NGINX](https://www.linode.com/docs/web-servers/nginx/how-to-configure-nginx/)
+  - [loadtest](https://github.com/alexfernandez/loadtest)
+  - [Artillery](https://artillery.io/)
+  - [Siege](https://github.com/JoeDog/siege)
 
 **[⬆ back to top](#table-of-contents)**
 
