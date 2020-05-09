@@ -1066,13 +1066,18 @@ functions:
   - [Top 8 Continuous Integration Tools](https://code-maze.com/top-8-continuous-integration-tools/)
   - TravisCI or CircleCI for hosted CI servers. 
   - Jenkins for your own managed CI servers.
-  - [circleci](https://circleci.com/)
-  - [Travis CI](https://travis-ci.org/)
-  - [Jenkins](https://www.jenkins.io/)
-  - [TeamCity](https://www.jetbrains.com/teamcity/)
-  - [Bamboo](https://www.atlassian.com/software/bamboo)
-  - [GitLab](https://about.gitlab.com/)
-  - [Buddy](https://buddy.works/)
+    - [circleci](https://circleci.com/)
+    - [Travis CI](https://travis-ci.org/)
+    - [Jenkins](https://www.jenkins.io/)
+    - [TeamCity](https://www.jetbrains.com/teamcity/)
+    - [Bamboo](https://www.atlassian.com/software/bamboo)
+    - [GitLab](https://about.gitlab.com/)
+    - [Buddy](https://buddy.works/)
+  - [Prettier](https://prettier.io/)
+    - [Option 2. pretty-quick](https://prettier.io/docs/en/precommit.html)
+  - [Webpack Bundle Analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
+  - [Storing Build Artifacts](https://circleci.com/docs/2.0/artifacts/)
+  - [CircleCI Exercise](https://github.com/chesterheng/robofriends-testing)
 
 **[⬆ back to top](#table-of-contents)**
 
