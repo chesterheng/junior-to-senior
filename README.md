@@ -18,6 +18,7 @@
   - [**Section 13: JWT + Sessions**](#section-13-jwt--sessions)
   - [**Section 14: AWS**](#section-14-aws)
   - [**Section 15: Performance Part 3**](#section-15-performance-part-3)
+  - [**Section 16: CI/CD**](#section-16-cicd)
   - [**Section 17: Extra Bits**](#section-17-extra-bits)
   - [**Section 20: Bonus: AMA Video!**](#section-20-bonus-ama-video)
 
@@ -1010,6 +1011,42 @@ functions:
   - [loadtest](https://github.com/alexfernandez/loadtest)
   - [Artillery](https://artillery.io/)
   - [Siege](https://github.com/JoeDog/siege)
+
+**[⬆ back to top](#table-of-contents)**
+
+## **Section 16: CI/CD**
+
+- Continuous Integration, Delivery, Deployment
+  - Continuous Integration: Code PR -> Tests -> Build -> Merge
+  - Continuous Delivery: Acceptance -> Manual -> Deploy
+  - Continuous Deployment: Acceptance -> Auto -> Deploy
+- Continuous Integration
+  - Developers integrate code into a shared repository frequently
+  - Each integration is verified by an automated build and automated tests
+  - Each pull requests of a bug fix or a new feature must go through an automatic build step to make sure that all our unit tests pass
+  - Make sure the code is compatible with the rest of the codebase
+  - One of the key benefits of integrating regularly is that you can detect errors quickly and locate them more easily because each change that is introduced is going to be small and it's going to pinpoint the specific change that introduce a defect
+  - If we make a PR, we run the tests and those tests fail. We know right away that that PR needs to get fixed.
+  - Even after the PR is merged and a bug suddenly appears, we know that this PR most likely did it because it was recently introduced
+  - The point is for companies to make sure that code from many developers has as little as possible bugs and that it stays consistent as much as possible
+  - This process makes sure that code of the individual developers meet a certain standard and that this way no matter how big our teams we can make sure that individual developers work don't divert from the original codebase
+  - We keep things in check and continuous integration is that when you combine the process of making a PR frequently with automated testing and building and then other developers checking the PR and then finally merging it
+  - By doing this you avoid the integration hell that usually happens when people wait for release day to merge everything
+- Continuous Delivery
+  - The practice of keeping your code base deployable at any point
+  - We need all the configurations necessary to push in production whenever we want continuous delivery
+  - It is the idea that we're always going to keep things ready so that when we want a delivery product deployed to production 
+  - There is an update to our product. We have this extra step of acceptance tests. We want this feature to do this and a QA analyst or a product owner checks to make sure that all the features are implemented and then manually a developer or a team lead clicks on a button that says deploy to production
+  - Continuous delivery is an extension of continuous integration to make sure that you can release new changes to your customers quickly in a sustainable way
+  - This means that on top of having automated your testing you also have to automate the release process so that you can deploy your production at any point in time
+  - In theory with continuous delivery delivery process in your company you can decide to release daily weekly every night or whatever suits your business requirement.
+- Continuous Deployment
+  - Keep your application deployable at any point in time
+  - Automatically deploy to production if acceptant tests are automatically passed
+- Why learn? 
+  - It's because continuous deployment and continuous delivery have developed as best practices for keeping our application in a good state in a deployable state at any point.
+  - Every change that passes all stages of your production what we call pipeline this process is released to your customers
+  - There's no human intervention and only a failed to test will prevent a new change to be deployed to production
 
 **[⬆ back to top](#table-of-contents)**
 
