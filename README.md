@@ -1078,6 +1078,8 @@ functions:
   - [Webpack Bundle Analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
   - [Storing Build Artifacts](https://circleci.com/docs/2.0/artifacts/)
   - [CircleCI Exercise](https://github.com/chesterheng/robofriends-testing)
+- Code -> Tests, Lint, Typescript -> Prettier -> Github -> circleci -> Code Review -> Merge
+- Deploy to Staging [process.env=staging]-> Acceptance Test -> Deploy to Production [process.env=production] -> [Smoke Test](https://www.freecodecamp.org/news/smoke-testing/)
 
 **[⬆ back to top](#table-of-contents)**
 
