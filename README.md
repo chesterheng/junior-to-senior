@@ -1047,6 +1047,32 @@ functions:
   - It's because continuous deployment and continuous delivery have developed as best practices for keeping our application in a good state in a deployable state at any point.
   - Every change that passes all stages of your production what we call pipeline this process is released to your customers
   - There's no human intervention and only a failed to test will prevent a new change to be deployed to production
+  - In the long run as the team grows they'll have less bugs and more manageable code
+- Building Great Software
+  - Project setup: decide on the folder structure
+  - Build steps: setup webpack or use create-react-app
+  - Continuous Integration setup:  
+  - Expand to continuous delivery and deployment 
+  - Before: Code -> Github -> Code Review -> Merge
+- Continuous Integration tools
+  - Code -> Tests, Lint, Typescript -> Prettier -> Github -> circleci -> Code Review -> Merge
+  - How CI tools works? 
+    - A CI server that runs your continuous integration or continuous delivery
+    - When you make a PR, the CI server know we just have a pool request and run all the unit tests, make sure everything passes and build the project
+    - If nothing fails in that step everything is good to go
+    - This PR is valid
+    - You can now do a code review and somebody can do a final check on the code and then people can merge it
+    - So we're adding this extra step over here or an extra machine that's going to do some work for us automatically every time we make a PR and circle CI is a software as a service solution
+  - [Top 8 Continuous Integration Tools](https://code-maze.com/top-8-continuous-integration-tools/)
+  - TravisCI or CircleCI for hosted CI servers. 
+  - Jenkins for your own managed CI servers.
+  - [circleci](https://circleci.com/)
+  - [Travis CI](https://travis-ci.org/)
+  - [Jenkins](https://www.jenkins.io/)
+  - [TeamCity](https://www.jetbrains.com/teamcity/)
+  - [Bamboo](https://www.atlassian.com/software/bamboo)
+  - [GitLab](https://about.gitlab.com/)
+  - [Buddy](https://buddy.works/)
 
 **[⬆ back to top](#table-of-contents)**
 
