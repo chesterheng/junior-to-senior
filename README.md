@@ -14,6 +14,12 @@
   - [**Section 9: Security**](#section-9-security)
   - [**Section 10: Code Analysis**](#section-10-code-analysis)
   - [**Section 11: Docker**](#section-11-docker)
+    - [Docker Containers](#docker-containers)
+    - [Dockerfile](#dockerfile)
+    - [Docker Commands](#docker-commands)
+    - [Docker Compose](#docker-compose)
+    - [PostgreSQL With Docker](#postgresql-with-docker)
+    - [Docker Networks](#docker-networks)
   - [**Section 12: Redis**](#section-12-redis)
   - [**Section 13: JWT + Sessions**](#section-13-jwt--sessions)
   - [**Section 14: AWS**](#section-14-aws)
@@ -665,10 +671,12 @@ app.get('/', (request, response) => {
 
 ## **Section 11: Docker**
 
-- Docker Containers
-  - Why did this tool get built?
-  - Why did people spend time and money creating it with any tools that we use?
-  - [Containers vs. Virtual Machines](https://blog.netapp.com/blogs/containers-vs-vms/)
+### Docker Containers
+- Why did this tool get built?
+- Why did people spend time and money creating it with any tools that we use?
+- [The Evolution of Linux Containers and Their Future](https://dzone.com/articles/evolution-of-linux-containers-future)
+- [Complete Intro to Containers](https://btholt.github.io/complete-intro-to-containers/)
+- [Containers vs. Virtual Machines](https://blog.netapp.com/blogs/containers-vs-vms/)
   - Containers: lightweight alternative to virtualization
   - Containers: use host operating system
   - Containers: bundle only their libraries and settings required for your application
@@ -676,46 +684,64 @@ app.get('/', (request, response) => {
   - Environment in the container is isolated from host machine
   - Image: Bundle your application into a standalone package that can live inside of a container
   - Image: the file that describes what the container should do
-  - [docker hub](https://hub.docker.com/): similar to npm
+- [Play with Docker](https://labs.play-with-docker.com/)
+- [docker hub](https://hub.docker.com/): similar to npm
 - [Installing Docker](https://docs.docker.com/docker-for-mac/install/)
 - [The Best Ways to Install Docker for Windows, Mac, and Linux, with Tips](https://www.bretfisher.com/installdocker/)
-- Dockerfile
-  - [`bin/bash`](https://unix.stackexchange.com/questions/398543/what-are-the-contents-of-bin-bash-and-what-do-i-do-if-i-accidentally-overwrote)
-  - RUN: execute and stack image in docker container
-  - CMD: exexute when enter docker container, only one CMD
-  - Outside host cannot access to container by default
-  - Port binding
-- [Docker Commands](https://docs.docker.com/engine/reference/builder/#usage)
-  - Build Server Image: `docker build -t smartbrainservercontainer .`
-  - Build Client Image: `docker build -t smartbrainclientcontainer .`
-  - Run and Enter container: `docker run -it smartbrainservercontainer`
-  - Run container in the background: `docker run -it -d smartbrainservercontainer`
-  - List all container: `docker ps`
-  - Enter a container running in background: `docker exec -it 7464fd583963 bash`
-  - Stop running container: `docker stop 7464fd583963`
-  - Port forwarding: `docker run -it -p 3000:3000 smartbrainservercontainer`
-- Docker Compose
-  - is a tool for defining and running multi-container Docker applications.
-  - edit docker-compose.yml
-  - Shutdown: `docker-compose down`
-  - Build container and run all services: `docker-compose up --build`
-  - Build container: `docker-compose build`
-  - Run all services in background: `docker-compose up -d`
-  - Run a specific service: `docker-compose run --service-ports smart-brain-api`
-  - Run a specific service and enter bash: `docker-compose exec smart-brain-api bash`
-  - [docker-compose build](https://docs.docker.com/compose/reference/build/)
-  - [docker-compose run](https://docs.docker.com/compose/reference/run/)
-  - [docker-compose up](https://docs.docker.com/compose/reference/up/)
-  - [What is the purpose of VOLUME in Dockerfile](https://stackoverflow.com/questions/34809646/what-is-the-purpose-of-volume-in-dockerfile)
-  - [Docker Volumes and Networks with Compose](https://www.linux.com/topic/cloud/docker-volumes-and-networks-compose/)
-- PostgresSQL
-  - [postgres](https://hub.docker.com/_/postgres/)
-  - [psql](https://www.postgresql.org/docs/9.2/app-psql.html)
-  - [Getting Started with PostgreSQL on Mac OSX](https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb)
-  - [How to Create Tables and Insert Data into SQL Databases](http://joshualande.com/create-tables-sql)
-  - [docker network create](https://docs.docker.com/engine/reference/commandline/network_create/)
-  - [Networking in Compose](https://docs.docker.com/compose/networking/)
-  - [docker-compose: difference between network and link](https://stackoverflow.com/questions/41294305/docker-compose-difference-between-network-and-link)
+
+**[⬆ back to top](#table-of-contents)**
+
+### Dockerfile
+- [`bin/bash`](https://unix.stackexchange.com/questions/398543/what-are-the-contents-of-bin-bash-and-what-do-i-do-if-i-accidentally-overwrote)
+- RUN: execute and stack image in docker container
+- CMD: exexute when enter docker container, only one CMD
+- Outside host cannot access to container by default
+- Port binding
+
+**[⬆ back to top](#table-of-contents)**
+
+### [Docker Commands](https://docs.docker.com/engine/reference/builder/#usage)
+- Build Server Image: `docker build -t smartbrainservercontainer .`
+- Build Client Image: `docker build -t smartbrainclientcontainer .`
+- Run and Enter container: `docker run -it smartbrainservercontainer`
+- Run container in the background: `docker run -it -d smartbrainservercontainer`
+- List all container: `docker ps`
+- Enter a container running in background: `docker exec -it 7464fd583963 bash`
+- Stop running container: `docker stop 7464fd583963`
+- Port forwarding: `docker run -it -p 3000:3000 smartbrainservercontainer`
+- [The Ultimate Docker Cheat Sheet](http://dockerlabs.collabnix.com/docker/cheatsheet/)
+
+**[⬆ back to top](#table-of-contents)**
+
+### Docker Compose
+- is a tool for defining and running multi-container Docker applications.
+- edit docker-compose.yml
+- Shutdown: `docker-compose down`
+- Build container and run all services: `docker-compose up --build`
+- Build container: `docker-compose build`
+- Run all services in background: `docker-compose up -d`
+- Run a specific service: `docker-compose run --service-ports smart-brain-api`
+- Run a specific service and enter bash: `docker-compose exec smart-brain-api bash`
+- [docker-compose build](https://docs.docker.com/compose/reference/build/)
+- [docker-compose run](https://docs.docker.com/compose/reference/run/)
+- [docker-compose up](https://docs.docker.com/compose/reference/up/)
+- [What is the purpose of VOLUME in Dockerfile](https://stackoverflow.com/questions/34809646/what-is-the-purpose-of-volume-in-dockerfile)
+- [Docker Volumes and Networks with Compose](https://www.linux.com/topic/cloud/docker-volumes-and-networks-compose/)
+
+**[⬆ back to top](#table-of-contents)**
+
+### PostgreSQL With Docker
+- [postgres](https://hub.docker.com/_/postgres/)
+- [psql](https://www.postgresql.org/docs/9.2/app-psql.html)
+- [Getting Started with PostgreSQL on Mac OSX](https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb)
+- [How to Create Tables and Insert Data into SQL Databases](http://joshualande.com/create-tables-sql)
+
+**[⬆ back to top](#table-of-contents)**
+
+### Docker Networks
+- [docker network create](https://docs.docker.com/engine/reference/commandline/network_create/)
+- [Networking in Compose](https://docs.docker.com/compose/networking/)
+- [docker-compose: difference between network and link](https://stackoverflow.com/questions/41294305/docker-compose-difference-between-network-and-link)
 
 **[⬆ back to top](#table-of-contents)**
 
