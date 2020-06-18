@@ -832,6 +832,9 @@ app.get('/', (request, response) => {
     - client <- JWT token <- server
     - /profile/23 -> token in authorisation header -> server <-> redis
     - client <- package <- server
+
+![](jwt.jpg)
+
 - [JWT](https://jwt.io/)
   - Meaning information in JWT Payload
   - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
