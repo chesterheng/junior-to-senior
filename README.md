@@ -10,6 +10,9 @@
   - [**Section 5: Performance Part 2**](#section-5-performance-part-2)
   - [**Section 6: Testing**](#section-6-testing)
   - [**Section 7: TypeScript**](#section-7-typescript)
+    - [Dynamic vs Static Typing](#dynamic-vs-static-typing)
+    - [Weakly vs Strongly Typed](#weakly-vs-strongly-typed)
+    - [Static Typing In Javascript](#static-typing-in-javascript)
   - [**Section 8: SPA vs Server Side Rendering**](#section-8-spa-vs-server-side-rendering)
   - [**Section 9: Security**](#section-9-security)
   - [**Section 10: Code Analysis**](#section-10-code-analysis)
@@ -396,34 +399,48 @@
 
 ## **Section 7: TypeScript**
 
+### Dynamic vs Static Typing
+
 - [Dynamic vs Static Typing](https://android.jlelse.eu/magic-lies-here-statically-typed-vs-dynamically-typed-languages-d151c7f95e2b)
-- Static Typed language Pros
-  - Static Typed language is self documented
-  - Static Typed language help in auto-complete in IDE
-  - Less bugs in production
-- Static Typed language Cons
-  - More Complex, more time to learn
-  - Testing is still required
-  - Slower development process
-- Dynamic Typed language Pros
-  - Less time to develop
-  - More flexible
-- TypeScript = JavaScript + Type Safe
-- Strong Typed language
-  - Cannot operate on 2 different types
-- Weak Typed language
-  - Type coercion
-- Static Typing In Javascript
-  - [Flow](https://flow.org/)
-    - Static Type Checker
-    - Flow -> Babel -> JS
-    - [Create React App](https://flow.org/en/docs/tools/create-react-app/)
-  - [Elm](https://elm-lang.org/)
-  - [Reason ML](https://reasonml.github.io/)
-  - [TypeScript](https://www.typescriptlang.org/)
-    - [TypeScript Editor Support](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support)
-    - `tsc --init`
-    - `tsc typescript.ts --watch`
+- Static Typed: variable type is known at compile-time
+- Dynamic Typed: variable type is checked at compile-time
+
+|     | Static Typed                     | Dynamic Typed           |
+| --- | -------------------------------- | ----------------------- |
+| Pro | known at compile-time            | checked during run-time |
+| Pro | Auto-complete in IDE             | More flexible           |
+| Pro | Less bugs in production          |                         |
+| Con | More Complex, more time to learn |                         |
+| Con | Testing is still required        |                         |
+| Con | Slower development process       |                         |
+
+TypeScript = JavaScript + Type Safe
+
+**[⬆ back to top](#table-of-contents)**
+
+### Weakly vs Strongly Typed
+
+- Strong Typed language: Cannot operate on 2 different types
+- Weak Typed language: Type coercion
+```javascript
+var a = 'hello'
+a + 17
+```
+
+**[⬆ back to top](#table-of-contents)**
+
+### Static Typing In Javascript
+
+- [Flow](https://flow.org/)
+  - Static Type Checker
+  - Flow -> Babel -> JS
+  - [Create React App](https://flow.org/en/docs/tools/create-react-app/)
+- [Elm](https://elm-lang.org/)
+- [Reason ML](https://reasonml.github.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+  - [TypeScript Editor Support](https://github.com/Microsoft/TypeScript/wiki/TypeScript-Editor-Support)
+  - `tsc --init`
+  - `tsc typescript.ts --watch`
   - [Interface vs Type alias in TypeScript 2.7](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)
   - [Typescript: Interfaces vs. Type Aliases](https://www.briangonzalez.org/post/interface-types-vs-type-aliases-typescript)
 - [Type Assertion](https://basarat.gitbook.io/typescript/type-system/type-assertion)
