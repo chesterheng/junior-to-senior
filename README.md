@@ -11,6 +11,7 @@
   - [**Section 6: Testing**](#section-6-testing)
   - [**Section 7: TypeScript**](#section-7-typescript)
     - [Dynamic vs Static Typing](#dynamic-vs-static-typing)
+    - [Do I switch to TypeScript or stick to JavaScript?](#do-i-switch-to-typescript-or-stick-to-javascript)
     - [Weakly vs Strongly Typed](#weakly-vs-strongly-typed)
     - [Static Typing In Javascript](#static-typing-in-javascript)
   - [**Section 8: SPA vs Server Side Rendering**](#section-8-spa-vs-server-side-rendering)
@@ -417,6 +418,77 @@
 TypeScript = JavaScript + Type Safe
 
 **[⬆ back to top](#table-of-contents)**
+
+### Do I switch to TypeScript or stick to JavaScript?
+
+Alban Delcourt:typing:  15 hours ago
+Well at first it was mandatory for me to use TS, as I had to use Angular...
+Then I gradually started to use it everywhere, in a personal library, in a backend node app, as I was also giving the TS training with Zenika ^^
+All I can say is that there is still some JS projects, some people doesn't want to use TS. So when you ask if you want to use TS, it really depends of the team you're working with, or who will maintain the project...
+If you're all alone, I would say go for it, you will spend a lot of time to think and write your interfaces, but this will save you so much more time later on :slightly_smiling_face:
+One thing though, be aware of the TS compiler configuration. One key feature of the compiler is that you can really tune the compiler to be more or less severe regarding your typings. In my opinion, always go for a strict mode.
+
+Valentin Cocaud:scala:  14 hours ago
+For me, it's not possible to use Typescript. It has to much "lies" in the types. I mean, it greatly reduces the capicity of Javascript only because the type are wrong/can't be expressed (because of a lack of proper support for all JavaScript's functionalities). And I'm not sure if this will be changed in the future. The way Typescript is designed dosen't really allow to have a fully sound type system. (edited) 
+
+Valentin Cocaud:scala:  14 hours ago
+If you want an example of one "lie" : In typescript you can't do console.log(1) && 1 because console.log returns void. Which is just wrong. You CAN do that in javascript. And it has always the expected result. (edited) 
+
+Valentin Cocaud:scala:  14 hours ago
+The only way I use Typescript is when I'm writing a library. It allows me to generate the .d.ts files and enable autocompletion for my users. But for me, it's the only advantage :disappointed:
+
+Alban Delcourt:typing:  14 hours ago
+I'm sorry @valou but I can't find a use case for this example. If you have a function where you directly know that it returns void, you should not try to test for truthiness. If I ever find myself in one of those cases, I would probably think of a code smell :confused:
+And yes you can do that in JavaScript, but I would argue that if you do that, you would be writing misleading code
+
+Valentin Cocaud:scala:  14 hours ago
+It's only for debugging purpose of course :slightly_smiling_face: It's a common trick, which I use a lot in React. It allows to log something in place where you have to put an expression
+
+Valentin Cocaud:scala:  14 hours ago
+An other example for production code then : You can't use symbol's as key in an object. Which is weird since it's one of the main reasons Symbols exists.
+
+Thibaud Courtoison:thinking_face:  14 hours ago
+You could technically do (console.log(1), 1)  :stuck_out_tongue:
+
+Alban Delcourt:typing:  14 hours ago
+Well if it's only for debugging, you can still add a // @ts-ignore in order to say, 'shut up, I know what I'm doing' :wink:
+
+Valentin Cocaud:scala:  14 hours ago
+Ok, but for symbols ?
+
+Alban Delcourt:typing:  13 hours ago
+I don't use JavaScript Symbols so I have no experience regarding Symbols + TS. I would presume that it should be well supported by TypeScript as it is a primitive type, but it's just an assumption ^^
+
+Valentin Cocaud:scala:  13 hours ago
+It was my asumption too ^^ But it seems that it's not the case :disappointed:
+
+Valentin Cocaud:scala:  13 hours ago
+Generator Function are also badly typed and doesn't allow to use it as a co-function
+
+Hugo Wood  13 hours ago
+I think TypeScript is a great tool, in my opinion there are some drawbacks:
+it can clash with other tools (frameworks, libs, build tools)
+sometimes it's too strict, sometimes it's not strict enough, and both can be frustrating, devs should accept that falling back to JS is OK
+the type system is very flexible and sometimes some devs (like me) will catch themselves spending hours trying to craft the perfect type, while the return on investment might not be that great
+compilation is slow, especially if the project uses large libs
+
+Valentin Cocaud:scala:  13 hours ago
+To complete, I think it really depends on your programation style. If you feat the design of the language, you will enjoy working with it :slightly_smiling_face:
+And I also think it depends of what you code. Even if I don't enjoy working with it, I use it on my own OpenSource library, because having cleanly typed public interface is great for users
+
+ohans:house_with_garden:  12 hours ago
+you should definitely know Typescript - be comfortable enough to work with it. Lots of large codebases use Typescript
+
+uper Go Team  2 days ago
+This is a trick question. TypeScript is a super set of JavaScript? /j
+Whats your background in programming? Do you like strict type driven workflows or loose and flexible but sometimes wild approach.
+Also depending on what you want to achieve neither might be a better option. For instance something like NextJS is effectively react but does more out the box and introduces restrictions. Restrictions can be good for learning as they limited the damage and the knowledge required to get moving quickly.
+
+Arpan  3 days ago
+If you dont know any typescript and this will be your first time using typescript then you will find it annoying at first. You will see yourself spending more time writing the types for your application and fighting the TS compiler. I have seen a lot of people ditch TS just because it made them "lose" time. But imo its a long term investment which really helps alot in bigger applications. Once you are used to the workflow, you are going to love it.
+
+Peter Foti:speech_balloon:  1 day ago
+When I first starting learning Typescript, I thought I would love it.  But I have come to find that the problems it solves (like preventing the wrong types from being passed) is not a problem that I ever run into.  Additionally, the additional syntax makes the code much less readable, requiring a lot more mental load to parse visually.  And then you also have to add in the time to compile it. To me, the "cost" of Typescript outweighs the "benefit".
 
 ### Weakly vs Strongly Typed
 
